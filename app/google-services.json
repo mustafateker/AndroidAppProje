@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896713208288",
+    "project_id": "androidstudyappproject",
+    "storage_bucket": "androidstudyappproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896713208288:android:8d787470f0f34cb1863b85",
+        "android_client_info": {
+          "package_name": "com.crossborders.studyhard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfvMAB3TXg4yCN9irN1n58MhnXOI32trs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

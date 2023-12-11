@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidProje</string>
+    <string name="giris">Giriş</string>
+    <string name="kaydol">Kaydol</string>
+    <string name="parola">Parola</string>
+    <string name="parolatekrar">Parola Tekrar</string>
+    <string name="todo">TODO</string>
+    <string name="kullan_c_ad">Kullanıcı Adı</string>
+    <string name="hesab_n_z_yok_mu_hemen_kaydolun">Hesabınız yok mu? Hemen Kaydolun</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Join_in_Screen">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adsz_tasarm"
+        tools:ignore="MissingConstraints,VisualLintBounds"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/UsernameText"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:autofillHints="true"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="#00FFFFFF"
+        android:backgroundTintMode="src_atop"
+        android:contextClickable="true"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:hapticFeedbackEnabled="true"
+        android:hint="@string/kullan_c_ad"
+        android:inputType="text"
+        android:isScrollContainer="false"
+        android:scrollbars="none"
+        android:singleLine="true"
+        android:textAllCaps="false"
+
+
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:barrierAllowsGoneWidgets="false"
+
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/Parola1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.879"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/Parola1"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="288dp"
+        android:allowUndo="true"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:forceHasOverlappingRendering="false"
+        android:hint="@string/parola"
+        android:hyphenationFrequency="none"
+        android:inputType="textPassword"
+        android:isScrollContainer="false"
+        android:linksClickable="false"
+        android:longClickable="true"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ParolaTekrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/ParolaTekrar"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="389dp"
+        android:allowUndo="true"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:forceHasOverlappingRendering="false"
+        android:hint="@string/parolatekrar"
+        android:hyphenationFrequency="none"
+        android:inputType="textPassword"
+        android:isScrollContainer="false"
+        android:linksClickable="false"
+        android:longClickable="true"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/JoininButton"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="499dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="@string/kaydol"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
