@@ -53,6 +53,27 @@
         app:layout_constraintVertical_bias="0.879"
         tools:visibility="visible" />
 
+    <TextView
+        android:id="@+id/GirisTittle"
+        android:layout_width="209dp"
+        android:layout_height="81dp"
+        android:autoSizeMinTextSize="50sp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Kaydol"
+        android:textColor="#F6F3F3"
+        android:textColorHighlight="#FAF7F7"
+        android:textSize="50sp"
+        android:visibility="visible"
+        app:barrierAllowsGoneWidgets="false"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/UsernameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.899"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/Parola1"
         android:layout_width="365dp"
@@ -105,18 +126,16 @@
         android:id="@+id/JoininButton"
         android:layout_width="365dp"
         android:layout_height="73dp"
-        android:layout_marginTop="499dp"
-        android:layout_marginBottom="160dp"
         android:background="@drawable/edit_text_background"
         android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="@string/kaydol"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/ParolaTekrar"
+        app:layout_constraintVertical_bias="0.183"
         tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

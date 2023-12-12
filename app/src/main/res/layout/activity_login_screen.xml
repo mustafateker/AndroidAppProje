@@ -8,6 +8,7 @@
 
 
     <ImageView
+
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/adsz_tasarm"
         tools:ignore="MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/UsernameText"
@@ -41,8 +42,6 @@
         android:singleLine="true"
         android:textAllCaps="false"
         android:textIsSelectable="false"
-
-
         android:textSize="20sp"
         android:visibility="visible"
         app:barrierAllowsGoneWidgets="false"
@@ -56,26 +55,34 @@
         app:layout_constraintVertical_bias="0.007"
         tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/LoginButton"
-        android:layout_width="365dp"
-        android:layout_height="73dp"
-        android:background="@drawable/edit_text_background"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
-        android:text="@string/giris"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/GirisTittle"
+        android:layout_width="209dp"
+        android:layout_height="81dp"
+        android:autoSizeMinTextSize="50sp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameText"
-        app:layout_constraintVertical_bias="0.463"
-        tools:ignore="VisualLintButtonSize" />
+
+        android:text="Giriş"
+        android:textColor="#F6F3F3"
+        android:textColorHighlight="#FAF7F7"
+        android:textSize="50sp"
+        android:visibility="visible"
+        app:barrierAllowsGoneWidgets="false"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/UsernameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.906"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Parola1"
         android:layout_width="365dp"
         android:layout_height="73dp"
+        android:layout_marginTop="32dp"
         android:allowUndo="true"
         android:autofillHints=""
         android:background="@drawable/edit_text_background"
@@ -90,18 +97,31 @@
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/LoginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameText"
-        app:layout_constraintVertical_bias="0.373" />
+        app:layout_constraintTop_toBottomOf="@+id/UsernameText" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="@string/giris"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Parola1"
+        app:layout_constraintVertical_bias="0.463"
+        tools:ignore="VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/hemenKaydolLink"
         android:layout_width="257dp"
         android:layout_height="48dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:autoLink="web"
         android:clickable="true"
@@ -112,10 +132,12 @@
         android:textColorHighlight="#FAF6F6"
         android:textColorHint="#FFFFFF"
         android:textColorLink="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton"
+        app:layout_constraintVertical_bias="0.092"
         tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

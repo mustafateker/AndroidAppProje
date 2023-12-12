@@ -52,7 +52,7 @@ class Join_in_Screen : AppCompatActivity() {
                     ).show()
                 }
 
-
+                
 
                 TextUtils.equals(Parola1.text.toString(), ParolaTekrar.text.toString().trim { it <= ' ' }) -> {
                     Toast.makeText(
@@ -61,6 +61,7 @@ class Join_in_Screen : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+
                 else -> {
                       val email: String = EmailText.text.toString().trim(){ it <= ' '}
                       val password : String = Parola1.text.toString().trim(){ it <= ' '}
@@ -96,15 +97,11 @@ class Join_in_Screen : AppCompatActivity() {
                                             task.exception!!.message.toString(),
                                             Toast.LENGTH_SHORT
                                         ).show()
-
-                                }
+                                    }
                             }
                         )
+                    }
                 }
             }
-
         }
-
     }
-
-}
