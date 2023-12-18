@@ -11,17 +11,196 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_menu_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
+        android:contentDescription="Anamenü background"
         android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H, 16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adsz_tasarm"
-        tools:ignore="MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/main_activity_background"
+        tools:layout_editor_absolutX="16dp" />
 
+    <ImageView
+        android:id="@+id/main_top_fon_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Ana menü top menü background"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_top_fon" />
+
+
+    <ImageView
+        android:id="@+id/time_counter"
+        android:layout_width="356dp"
+        android:layout_height="195dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gunun_sozu"
+
+        app:layout_constraintVertical_bias="0.059"
+        app:srcCompat="@drawable/time_counter" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="356dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/hos_geldin_user_id"
+        android:textColor="@color/white"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_top_fon_ImageView" />
+
+    <TextView
+        android:id="@+id/gunun_sozu"
+        android:layout_width="360dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="günün sözü"
+        android:text="@string/ozlu_soz_1"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <ImageButton
+        android:id="@+id/menu_button"
+        android:layout_width="66dp"
+        android:layout_height="54dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Menü butonu"
+        app:layout_constraintBottom_toBottomOf="@id/main_top_fon_ImageView"
+        app:layout_constraintEnd_toEndOf="@id/main_top_fon_ImageView"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_top_fon_ImageView"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/menu_button" />
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="66dp"
+        android:layout_height="54dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Arama butonu"
+        app:layout_constraintBottom_toBottomOf="@id/main_top_fon_ImageView"
+        app:layout_constraintEnd_toEndOf="@id/main_top_fon_ImageView"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_top_fon_ImageView"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/search_icon" />
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="25dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="388dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.754"
+        android:contentDescription ="Scroll bar"
+        />
+
+
+    <ScrollView
+
+        android:id="@+id/scrollView2"
+        android:layout_width="413dp"
+        android:layout_height="195dp"
+        android:contentDescription="Scroll view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/time_counter"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/gecmis_denemeler"
+                android:layout_width="144dp"
+                android:layout_height="105dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="52dp"
+                android:contentDescription="gecmis denemelerim sayfası"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintBottom_toTopOf="@+id/level"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/deneme_hesapla"
+                android:layout_width="144dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="deneme hesaplama sayfası"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintBottom_toTopOf="@+id/performansim"
+                app:layout_constraintEnd_toStartOf="@id/gecmis_denemeler"
+                app:layout_constraintHorizontal_bias="0.177"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/performansim"
+                android:layout_width="144dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="performansım sayfası"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintBottom_toBottomOf="parent  "
+                app:layout_constraintEnd_toStartOf="@+id/level"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deneme_hesapla" />
+
+            <ImageButton
+                android:id="@+id/level"
+                android:layout_width="144dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="52dp"
+                android:contentDescription="level sayfası"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import java.security.MessageDigest
+
 class Join_in_Screen : AppCompatActivity() {
 
 
