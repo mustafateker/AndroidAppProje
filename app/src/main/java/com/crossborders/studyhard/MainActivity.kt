@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
         if (user != null) {
-            val Username = user.email
+            val Username = user?.email?.split("@")?.get(0) ?: "Guest"
             val metin = "Hoş geldin $Username"
             val welcomeUserText: TextView = findViewById(R.id.textView)
             welcomeUserText.text = metin
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val fontResourceId = R.font.open_sans_regular
         findViewById<TextView>(R.id.textView).typeface = ResourcesCompat.getFont(this, fontResourceId)
-        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 30.toFloat())
+        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 25.toFloat())
 
         val playfairItalic = R.font.playfair_italic
         findViewById<TextView>(R.id.gunun_sozu).typeface = ResourcesCompat.getFont(this, playfairItalic)
