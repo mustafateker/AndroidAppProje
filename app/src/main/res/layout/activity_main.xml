@@ -54,7 +54,7 @@
 
         app:layout_constraintTop_toBottomOf="@id/gunun_sozu"
         app:layout_constraintVertical_bias="0.059"
-        app:srcCompat="@drawable/countdown_timer" />
+        app:srcCompat="@drawable/time_counter_2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="365dp"
@@ -106,34 +106,34 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="369dp"
+        android:layout_width="370dp"
         android:layout_height="65dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
+
         android:ems="10"
         android:inputType="text"
         android:text="@string/hos_geldin_user_id"
-        android:textColor="@color/white"
-
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_top_fon_ImageView" />
 
     <TextView
         android:id="@+id/gunun_sozu"
-        android:layout_width="364dp"
-        android:layout_height="69dp"
+        android:layout_width="369dp"
+        android:layout_height="68dp"
+
         android:layout_marginTop="16dp"
         android:contentDescription="günün sözü"
         android:text="@string/ozlu_soz_1"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         android:textIsSelectable="false"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageButton
         android:id="@+id/menu_button"
@@ -189,7 +189,6 @@
         android:contentDescription="Scroll view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@id/time_counter"

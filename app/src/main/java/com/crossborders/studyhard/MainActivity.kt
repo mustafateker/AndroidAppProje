@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val fontResourceId = R.font.open_sans_regular
         findViewById<TextView>(R.id.textView).typeface = ResourcesCompat.getFont(this, fontResourceId)
-        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 40.toFloat())
+        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 30.toFloat())
 
         val playfairItalic = R.font.playfair_italic
         findViewById<TextView>(R.id.gunun_sozu).typeface = ResourcesCompat.getFont(this, playfairItalic)
