@@ -20,25 +20,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
         // Hoş geldin User_name yazdırma
         val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
         if (user != null) {
-            val Username = user?.email?.split("@")?.get(0) ?: "Guest"
+            val Username = user.email?.split("@")?.get(0) ?: "Guest"
             val metin = "Hoş geldin $Username"
             val welcomeUserText: TextView = findViewById(R.id.textView)
             welcomeUserText.text = metin
         }
 
-        val fontResourceId = R.font.open_sans_regular
+        val fontResourceId = R.font.libre_franklin_semibold
         findViewById<TextView>(R.id.textView).typeface = ResourcesCompat.getFont(this, fontResourceId)
-        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 25.toFloat())
+        findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 27.toFloat())
 
-        val playfairItalic = R.font.playfair_italic
+        /*val playfairItalic = R.font.open_sans_regular
         findViewById<TextView>(R.id.gunun_sozu).typeface = ResourcesCompat.getFont(this, playfairItalic)
-        findViewById<TextView>(R.id.gunun_sozu).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20.toFloat())
+        findViewById<TextView>(R.id.gunun_sozu).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25.toFloat())*/
 
-        val codepro = R.font.code_pro
+        val codepro = R.font.montserrat_extra_bold
         findViewById<TextView>(R.id.gunTextView).typeface = ResourcesCompat.getFont(this , codepro)
         findViewById<TextView>(R.id.gunTextView).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 50.toFloat())
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -20,6 +21,9 @@ class Login_Screen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
 
+
+
+
         val hemenKaydolLink : TextView = findViewById(R.id.hemenKaydolLink)
 
         hemenKaydolLink.setOnClickListener() {
@@ -32,6 +36,23 @@ class Login_Screen : AppCompatActivity() {
         val LoginBtn : Button = findViewById(R.id.LoginButton)
         val EmailLoginText : EditText = findViewById(R.id.UsernameText)
         val PasswordText : EditText = findViewById(R.id.Parola1)
+
+
+        val benihatirla : CheckBox = findViewById(R.id.BeniHatirla)
+
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        if (benihatirla.isClickable) {
+
+            editor.putBoolean("rememberMe", true)
+            editor.putString("username", "kullaniciAdi")
+            editor.putString("password", "sifre")
+        } else {
+
+            editor.clear()
+        }
+        editor.apply()
 
         LoginBtn.setOnClickListener{
             when{
@@ -102,5 +123,7 @@ class Login_Screen : AppCompatActivity() {
         }
 
         }
+
+
     }
 }

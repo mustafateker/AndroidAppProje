@@ -16,7 +16,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adsz_tasarm"
+        app:srcCompat="@drawable/app_design_revize"
         tools:ignore="MissingConstraints,VisualLintBounds"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -50,29 +50,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.879"
+        app:layout_constraintVertical_bias="0.904"
         tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/GirisTittle"
-        android:layout_width="209dp"
-        android:layout_height="81dp"
-        android:autoSizeMinTextSize="50sp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:text="Kaydol"
-        android:textColor="#F6F3F3"
-        android:textColorHighlight="#FAF7F7"
-        android:textSize="50sp"
-        android:visibility="visible"
-        app:barrierAllowsGoneWidgets="false"
-        app:chainUseRtl="false"
-        app:layout_constraintBottom_toTopOf="@+id/UsernameText"
+    <Button
+        android:id="@+id/JoininButton"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+
+        android:backgroundTint="#0D1831"
+        android:text="@string/kaydol"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.899"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ParolaTekrar"
+        app:layout_constraintVertical_bias="0.285"
+        tools:ignore="VisualLintButtonSize" />
+
+    <EditText
+        android:id="@+id/ParolaTekrar"
+        android:layout_width="365dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="452dp"
+        android:allowUndo="true"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:forceHasOverlappingRendering="false"
+        android:hint="@string/parolatekrar"
+        android:hyphenationFrequency="none"
+        android:inputType="textPassword"
+        android:isScrollContainer="false"
+        android:linksClickable="false"
+        android:longClickable="true"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/Parola1"
@@ -97,45 +114,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.736" />
 
-    <EditText
-        android:id="@+id/ParolaTekrar"
-        android:layout_width="365dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="389dp"
-        android:allowUndo="true"
-        android:autofillHints=""
-        android:background="@drawable/edit_text_background"
-        android:ems="10"
-        android:forceHasOverlappingRendering="false"
-        android:hint="@string/parolatekrar"
-        android:hyphenationFrequency="none"
-        android:inputType="textPassword"
-        android:isScrollContainer="false"
-        android:linksClickable="false"
-        android:longClickable="true"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="20sp"
+    <TextView
+        android:id="@+id/GirisTittle"
+        android:layout_width="209dp"
+        android:layout_height="81dp"
+        android:autoSizeMinTextSize="50sp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Kaydol"
+        android:textColor="#F6F3F3"
+        android:textColorHighlight="#FAF7F7"
+        android:textSize="50sp"
+        android:visibility="visible"
+        app:barrierAllowsGoneWidgets="false"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/UsernameText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/JoininButton"
-        android:layout_width="365dp"
-        android:layout_height="73dp"
-        android:background="@drawable/edit_text_background"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
-        android:text="@string/kaydol"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/ParolaTekrar"
-        app:layout_constraintVertical_bias="0.183"
-        tools:ignore="VisualLintButtonSize" />
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.931"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

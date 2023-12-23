@@ -5,9 +5,11 @@
     <string name="parola">Parola</string>
     <string name="parolatekrar">Parola Tekrar</string>
     <string name="todo">TODO</string>
-    <string name="kullan_c_ad">e-mail</string>
+    <string name="kullan_c_ad">E-mail</string>
     <string name="hesab_n_z_yok_mu_hemen_kaydolun">Hesabınız yok mu? Hemen Kaydolun</string>
-    <string name="hos_geldin_user_id">Hos geldin</string>
-    <string name="fonts_opensans_regular_ttf">fonts/OpenSans-Regular.ttf</string>
+    <string name="hos_geldin_user_id">Hos geldin /USER</string>
     <string name="ozlu_soz_1">En zor kararları yalnızca en güçlü iradeler verebilir.</string>
+    <string name="anamenutop">Ana menü top menü background</string>
+    <string name="yks_geri_sayim">YKS Geri sayım sayacı</string>
+
 </resources>

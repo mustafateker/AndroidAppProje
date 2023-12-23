@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_Screen">
+    tools:context=".Login_Screen"
+    tools:ignore="ExtraText">
 
 
     <ImageView
@@ -16,7 +17,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adsz_tasarm"
+        app:srcCompat="@drawable/app_design_revize"
         tools:ignore="MissingConstraints,VisualLintBounds"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -54,6 +55,24 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.007"
         tools:visibility="visible" />
+
+
+    <CheckBox
+        android:id="@+id/BeniHatirla"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="32dp"
+        android:buttonTint="#FFFFFF"
+        android:text="Beni Hatırla "
+        android:textColor="#F3F3F3"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hemenKaydolLink"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/GirisTittle"
@@ -106,12 +125,10 @@
         android:layout_width="365dp"
         android:layout_height="73dp"
         android:layout_marginBottom="132dp"
-        android:background="@drawable/edit_text_background"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="@string/giris"
         android:textSize="20sp"
+        android:backgroundTint="#0D1831"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Parola1"
@@ -120,7 +137,7 @@
 
     <TextView
         android:id="@+id/hemenKaydolLink"
-        android:layout_width="257dp"
+        android:layout_width="307dp"
         android:layout_height="48dp"
         android:layout_marginEnd="24dp"
         android:autoLink="web"
@@ -132,12 +149,13 @@
         android:textColorHighlight="#FAF6F6"
         android:textColorHint="#FFFFFF"
         android:textColorLink="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.329"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.092"
+        app:layout_constraintVertical_bias="0.09"
         tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
