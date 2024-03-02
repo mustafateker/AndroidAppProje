@@ -4,6 +4,5 @@ data class Deneme(
     val siraIndex: Int,
     val name: String,
     val date: String,
-    val GenelNetBilgisi: Int,
-    val i: Int
+    val GenelNetBilgisi: Int
 )

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DenemeAdapter(private val denemeList: List<Deneme>) :
+ class DenemeAdapter(private val denemeList: List<Deneme>) :
     RecyclerView.Adapter<DenemeAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -16,6 +16,7 @@ class DenemeAdapter(private val denemeList: List<Deneme>) :
         val adiTextView: TextView = itemView.findViewById(R.id.adiTextView)
         val tarihTextView: TextView = itemView.findViewById(R.id.tarihTextView)
         val genelNetBilgisiTextView: TextView = itemView.findViewById(R.id.genelNetBilgisiTextView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,6 +30,7 @@ class DenemeAdapter(private val denemeList: List<Deneme>) :
         holder.adiTextView.text = "Deneme adı: ${deneme.name}"
         holder.tarihTextView.text = "Deneme Tarihi: ${deneme.date}"
         holder.genelNetBilgisiTextView.text = "Deneme genel net bilgisi: ${deneme.GenelNetBilgisi}"
+
     }
 
     override fun getItemCount(): Int {

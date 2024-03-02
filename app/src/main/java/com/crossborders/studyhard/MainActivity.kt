@@ -21,8 +21,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
+        val gecmisDenemeler : ImageButton = findViewById(R.id.gecmis_denemeler)
+        gecmisDenemeler.setOnClickListener(){
+            val gecmisDenemelerPage = Intent(applicationContext, gecmis_denemeler::class.java)
+            startActivity(gecmisDenemelerPage)
+        }
         // Hoş geldin User_name yazdırma
         val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
@@ -79,12 +82,6 @@ class MainActivity : AppCompatActivity() {
                 geriSayimDakikaText.text = geriSayimDakikaTextView
             }
 
-            val gecmisDenemelerLink: ImageButton = findViewById(R.id.gecmis_denemeler)
-            gecmisDenemelerLink.setOnClickListener()
-            {
-                val gecmisDenemelerimPage = Intent(applicationContext, gecmis_denemeler::class.java)
-                startActivity(gecmisDenemelerimPage)
-            }
 
             override fun onFinish() {
 
@@ -93,4 +90,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 }
