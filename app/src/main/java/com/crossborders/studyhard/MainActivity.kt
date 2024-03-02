@@ -2,9 +2,11 @@ package com.crossborders.studyhard
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.TypedValue
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val anlikTarih = System.currentTimeMillis()
 
         val zamanFarki = hedefTarihZamani!!.time - anlikTarih
-        object : CountDownTimer(zamanFarki, 1000) {
+        val start = object : CountDownTimer(zamanFarki, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val kalanZaman = millisUntilFinished
                 val gun = kalanZaman / (24 * 60 * 60 * 1000)
@@ -77,9 +79,18 @@ class MainActivity : AppCompatActivity() {
                 geriSayimDakikaText.text = geriSayimDakikaTextView
             }
 
+            val gecmisDenemelerLink: ImageButton = findViewById(R.id.gecmis_denemeler)
+            gecmisDenemelerLink.setOnClickListener()
+            {
+                val gecmisDenemelerimPage = Intent(applicationContext, gecmis_denemeler::class.java)
+                startActivity(gecmisDenemelerimPage)
+            }
+
             override fun onFinish() {
 
             }
         }.start()
+
+
     }
 }
