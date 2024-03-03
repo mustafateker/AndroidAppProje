@@ -2,6 +2,7 @@ package com.crossborders.studyhard
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -19,6 +20,8 @@ class gecmis_denemeler : AppCompatActivity() {
 
         // RecyclerView ve adapter'ı ayarlayın
         val recyclerView: RecyclerView = findViewById(R.id.main_activity_recycler_view)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
         denemeAdapter = DenemeAdapter(denemeList)
         recyclerView.adapter = denemeAdapter
     }

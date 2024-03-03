@@ -222,8 +222,8 @@
                 android:layout_height="105dp"
                 android:layout_marginEnd="52dp"
                 android:contentDescription="level sayfası"
-                android:src="@drawable/deneme_bunu_unutma_image"
                 android:scaleType="centerCrop"
+                android:src="@drawable/deneme_bunu_unutma_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

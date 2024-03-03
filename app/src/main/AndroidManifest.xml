@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AndroidProje"
         tools:targetApi="31">
         <activity
+            android:name=".bunu_unutma"
+            android:exported="false" />
+        <activity
             android:name=".gecmis_denemeler"
             android:exported="false" />
         <activity
