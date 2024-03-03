@@ -85,17 +85,19 @@ class MainActivity : AppCompatActivity() {
              }
         }.start()
 
+        val bunu_unutma_page : ImageButton= findViewById(R.id.level)
+        bunu_unutma_page.setOnClickListener(){
+            val bunu_unutmaPage = Intent(applicationContext,bunu_unutma::class.java)
+            startActivity(bunu_unutmaPage)
+        }
+
         val gecmisDenemeler : ImageButton = findViewById(R.id.gecmis_denemeler)
         gecmisDenemeler.setOnClickListener() {
             val gecmisDenemelerPage = Intent(applicationContext, gecmis_denemeler::class.java)
             startActivity(gecmisDenemelerPage)
         }
 
-        val bunu_unutma : ImageButton= findViewById(R.id.level)
-        bunu_unutma.setOnClickListener(){
-            val bunu_unutmaPage = Intent(applicationContext,bunu_unutma::class.java)
-            startActivity(bunu_unutmaPage)
-        }
+
     }
 
 
