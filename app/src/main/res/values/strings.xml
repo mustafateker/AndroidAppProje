@@ -13,4 +13,6 @@
     <string name="yks_geri_sayim">YKS Geri sayım sayacı</string>
     <string name="bunu_unutma">Bunu Unutma</string>
     <string name="z_ld">Çözüldü</string>
+    <string name="tyt_net_hesapla">TYT Net Hesapla Buton</string>
+    <string name="ayt_net_hesapla">AYT Net Hesapla Buton</string>
 </resources>

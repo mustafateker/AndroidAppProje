@@ -85,6 +85,12 @@ class MainActivity : AppCompatActivity() {
              }
         }.start()
 
+
+        val denemeNetHesapla : ImageButton =findViewById(R.id.deneme_hesapla)
+        denemeNetHesapla.setOnClickListener(){
+            val denemeNetHesaplaPage = Intent(applicationContext,deneme_net_hesapla::class.java)
+            startActivity(denemeNetHesaplaPage)
+        }
         val bunu_unutma_page : ImageButton= findViewById(R.id.level)
         bunu_unutma_page.setOnClickListener(){
             val bunu_unutmaPage = Intent(applicationContext,bunu_unutma::class.java)
@@ -96,6 +102,8 @@ class MainActivity : AppCompatActivity() {
             val gecmisDenemelerPage = Intent(applicationContext, gecmis_denemeler::class.java)
             startActivity(gecmisDenemelerPage)
         }
+
+
 
 
     }
