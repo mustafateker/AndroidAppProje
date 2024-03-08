@@ -52,6 +52,8 @@ class Login_Screen : AppCompatActivity() {
 
             editor.clear()
         }
+
+
         editor.apply()
 
         LoginBtn.setOnClickListener{

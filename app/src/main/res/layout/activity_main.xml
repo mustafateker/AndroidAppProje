@@ -122,7 +122,8 @@
         app:layout_constraintTop_toTopOf="@+id/hosgeldin_user"
         tools:ignore="TextSizeCheck" />
 
-    <ImageButton
+
+    <ImageView
 
 
         android:id="@+id/menu_button"
@@ -138,7 +139,8 @@
         app:layout_constraintTop_toTopOf="@id/main_top_fon_ImageView"
         app:layout_constraintVertical_bias="0.485"
         app:srcCompat="@drawable/menu_button_2"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        android:onClick="showPopupMenu" />
+
 
     <androidx.core.widget.NestedScrollView
 

@@ -6,22 +6,68 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.TypedValue
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 import java.text.SimpleDateFormat
 import java.util.Locale
+import android.widget.PopupMenu
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    val menuInflater = getMenuInflater()
+        menuInflater.inflate(R.menu.ana_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    if (item.itemId == R.id.cikis_yap){
+        auth.signOut()
+        val Intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+        return super.onOptionsItemSelected(item)
+    }
+    fun showPopupMenu(view: View) {
+        val popupMenu = PopupMenu(this, view)
+        val inflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.ana_menu, popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.cikis_yap -> {
+                    FirebaseAuth.getInstance().signOut()
+                    val intent = Intent(this, Login_Screen::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    startActivity(intent)
+                    finish()
+                    true // true döndürerek işlemin başarılı olduğunu belirtiyoruz
+                }
+                else -> false // tanımlanmış bir öğe değilse false döndürüyoruz
+            }
+        }
+        popupMenu.show()
+    }
+
 
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+    auth =Firebase.auth
 
 
         // Hoş geldin User_name yazdırma
