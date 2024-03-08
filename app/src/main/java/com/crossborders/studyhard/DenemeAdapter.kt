@@ -2,6 +2,8 @@ package com.crossborders.studyhard
 
 
 
+import android.annotation.SuppressLint
+import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,12 +26,21 @@ import androidx.recyclerview.widget.RecyclerView
         return ViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val deneme = denemeList[position]
-        holder.siraIndeksiTextView.text = "Deneme sıra indeksi: ${deneme.siraIndex}"
-        holder.adiTextView.text = "Deneme adı: ${deneme.name}"
-        holder.tarihTextView.text = "Deneme Tarihi: ${deneme.date}"
-        holder.genelNetBilgisiTextView.text = "Deneme genel net bilgisi: ${deneme.GenelNetBilgisi}"
+        holder.tarihTextView.typeface= Typeface.create("open_sans" , Typeface.NORMAL )
+        holder.tarihTextView.textSize = 16f
+        holder.adiTextView.typeface= Typeface.create("open_sans" , Typeface.NORMAL)
+        holder.adiTextView.textSize =16f
+        holder.siraIndeksiTextView.typeface = Typeface.create("libre_franklin_semibold" , Typeface.BOLD)
+        holder.siraIndeksiTextView.textSize = 16f
+        holder.genelNetBilgisiTextView.typeface = Typeface.create("open_sans" , Typeface.NORMAL)
+        holder.genelNetBilgisiTextView.textSize = 16f
+        holder.siraIndeksiTextView.text = " ${deneme.siraIndex}"
+        holder.adiTextView.text = " ${deneme.name}"
+        holder.tarihTextView.text = " ${deneme.date}"
+        holder.genelNetBilgisiTextView.text = " ${deneme.GenelNetBilgisi}"
 
     }
 

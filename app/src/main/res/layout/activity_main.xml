@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,7 +17,7 @@
         android:contentDescription="@string/anamenutop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/main_top_fon_revize" />
@@ -29,13 +28,14 @@
         android:layout_height="228dp"
         android:contentDescription="@string/yks_geri_sayim"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hosgeldin_user"
         app:srcCompat="@drawable/time_counter_4" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="367dp"
         android:layout_height="109dp"
         app:layout_constraintBottom_toBottomOf="@id/time_counter"
@@ -76,7 +76,7 @@
             android:layout_width="98dp"
             android:layout_height="57dp"
             android:layout_marginEnd="7dp"
-            android:text="Dakika"
+            android:text="@string/dakika"
             android:textAlignment="center"
             android:textColor="#4783FF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,24 +87,26 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <ImageView
+    <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/hosgeldin_user"
         android:layout_width="402dp"
         android:layout_height="69dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="10dp"
         android:scaleType="fitXY"
         app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_top_fon_ImageView"
-        app:srcCompat="@drawable/hosgeldin_user_revize_2" />
+        app:srcCompat="@drawable/hosgeldin_user_revize_2"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="376dp"
-        android:layout_height="48dp"
+        android:layout_width="365dp"
+        android:layout_height="51dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:ems="10"
@@ -115,17 +117,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/hosgeldin_user"
         app:layout_constraintEnd_toEndOf="@id/hosgeldin_user"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="@id/hosgeldin_user"
         app:layout_constraintTop_toTopOf="@+id/hosgeldin_user"
-        app:layout_constraintVertical_bias="0.476" />
+        tools:ignore="TextSizeCheck" />
 
     <ImageButton
 
 
         android:id="@+id/menu_button"
-        android:layout_width="58dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="45dp"
         android:background="@android:color/transparent"
         android:contentDescription="Menü butonu"
         android:scaleType="fitCenter"
@@ -135,100 +137,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/main_top_fon_ImageView"
         app:layout_constraintVertical_bias="0.485"
-        app:srcCompat="@drawable/menu_button_2" />
+        app:srcCompat="@drawable/menu_button_2"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="25dp"
-        android:layout_height="217dp"
-        android:layout_marginStart="388dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toTopOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.754"
-        android:contentDescription ="Scroll bar"
-        tools:ignore="VisualLintBounds" />
-
-
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
 
         android:id="@+id/scrollView2"
         android:layout_width="413dp"
         android:layout_height="195dp"
+        android:layout_marginBottom="60dp"
         android:contentDescription="Scroll view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/time_counter"
-        app:layout_constraintVertical_bias="0.733">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
                 android:id="@+id/gecmis_denemeler"
-                android:layout_width="144dp"
-                android:layout_height="105dp"
+                android:layout_width="190dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="52dp"
-
+                android:layout_marginEnd="8dp"
                 android:contentDescription="gecmis denemelerim sayfası"
-                android:src="@drawable/deneme_gecmis_denemelerim_image"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toTopOf="@+id/level"
+                android:src="@drawable/deneme_gecmis_denemelerim_image"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
                 android:id="@+id/deneme_hesapla"
-                android:layout_width="144dp"
-                android:layout_height="105dp"
-                android:layout_marginStart="28dp"
+                android:layout_width="190dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="5dp"
                 android:contentDescription="deneme hesaplama sayfası"
                 android:scaleType="centerCrop"
                 android:src="@drawable/deneme_net_hesapla_image"
                 app:layout_constraintBottom_toTopOf="@+id/performansim"
                 app:layout_constraintEnd_toStartOf="@id/gecmis_denemeler"
-                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
                 android:id="@+id/performansim"
-                android:layout_width="144dp"
-                android:layout_height="105dp"
-                android:layout_marginStart="16dp"
+                android:layout_width="190dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
+                android:layout_marginEnd="5dp"
                 android:contentDescription="performansım sayfası"
-                android:src="@drawable/deneme_performansim_image"
                 android:scaleType="centerCrop"
+                android:src="@drawable/deneme_performansim_image"
                 app:layout_constraintBottom_toBottomOf="parent  "
                 app:layout_constraintEnd_toStartOf="@+id/level"
-                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/deneme_hesapla" />
 
-            <ImageButton
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
                 android:id="@+id/level"
-                android:layout_width="144dp"
-                android:layout_height="105dp"
-                android:layout_marginEnd="52dp"
+                android:layout_width="190dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
                 android:contentDescription="level sayfası"
                 android:scaleType="centerCrop"
                 android:src="@drawable/deneme_bunu_unutma_image"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gecmis_denemeler"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/main_top_icon"
+        android:layout_width="257dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_top_fon_ImageView"
+        app:layout_constraintEnd_toStartOf="@+id/menu_button"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352"
+        app:srcCompat="@drawable/toolbar_icon_2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
