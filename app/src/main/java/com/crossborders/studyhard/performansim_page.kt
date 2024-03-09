@@ -12,7 +12,7 @@ import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 
-class PerformansimPage : AppCompatActivity() {
+class performansim_page: AppCompatActivity() {
     private lateinit var binding: ActivityPerformansimPageBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
