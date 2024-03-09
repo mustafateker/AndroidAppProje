@@ -10,10 +10,13 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_icon__main_top"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProje"
         tools:targetApi="31">
+        <activity
+            android:name=".PerformansimPage"
+            android:exported="false" />
         <activity
             android:name=".performansim_page"
             android:exported="false" />
