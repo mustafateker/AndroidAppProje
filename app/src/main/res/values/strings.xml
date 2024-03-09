@@ -16,4 +16,6 @@
     <string name="tyt_net_hesapla">TYT Net Hesapla Buton</string>
     <string name="ayt_net_hesapla">AYT Net Hesapla Buton</string>
     <string name="dakika">Dakika</string>
+    <string name="performansim">Performansım</string>
+    <string name="performansim_scroll">performansım menu scroll</string>
 </resources>

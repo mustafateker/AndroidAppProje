@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-    val menuInflater = getMenuInflater()
+    val menuInflater = menuInflater
         menuInflater.inflate(R.menu.ana_menu,menu)
         return super.onCreateOptionsMenu(menu)
     }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
     if (item.itemId == R.id.cikis_yap){
         auth.signOut()
-        val Intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
         finish()
     }
@@ -74,8 +74,8 @@ class MainActivity : AppCompatActivity() {
         val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
         if (user != null) {
-            val Username = user.email?.split("@")?.get(0) ?: "Guest"
-            val metin = "Hoş geldin $Username"
+            val username = user.email?.split("@")?.get(0) ?: "Guest"
+            val metin = "Hoş geldin $username"
             val welcomeUserText: TextView = findViewById(R.id.textView)
             welcomeUserText.text = metin
         }
@@ -147,6 +147,11 @@ class MainActivity : AppCompatActivity() {
         gecmisDenemeler.setOnClickListener() {
             val gecmisDenemelerPage = Intent(applicationContext, gecmis_denemeler::class.java)
             startActivity(gecmisDenemelerPage)
+        }
+
+        val performansim_Page : ImageButton = findViewById(R.id.performansim)
+        performansim_Page.setOnClickListener(){
+            Intent(applicationContext, PerformansimPage::class.java)
         }
 
 
