@@ -33,14 +33,14 @@ class PerformansimPage : AppCompatActivity() {
 
 
         barEntry.add(BarEntry(0f, 85.00f))
-        barEntry.add(BarEntry(0f, 90.00f))
-        barEntry.add(BarEntry(0f, 86.25f))
-        barEntry.add(BarEntry(0f, 78.00f))
-        barEntry.add(BarEntry(0f, 92.00f))
-        barEntry.add(BarEntry(0f, 71.50f))
-        barEntry.add(BarEntry(0f, 64.50f))
+        barEntry.add(BarEntry(1f, 90.00f))
+        barEntry.add(BarEntry(2f, 86.25f))
+        barEntry.add(BarEntry(3f, 78.00f))
+        barEntry.add(BarEntry(4f, 92.00f))
+        barEntry.add(BarEntry(5f, 71.50f))
+        barEntry.add(BarEntry(6f, 64.50f))
 
-        val barDataSet = BarDataSet(barEntry, "Haftalık Performans")
+        val barDataSet = BarDataSet( barEntry, "Haftalık Performans")
         barDataSet.valueTextSize = 15f
         barDataSet.setColors(*ColorTemplate.MATERIAL_COLORS)
 

@@ -12,15 +12,13 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/app_icon__main_top"
+        android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProje"
         tools:targetApi="31">
         <activity
             android:name=".PerformansimPage"
             android:exported="false" />
-
-
         <activity
             android:name=".deneme_net_hesapla"
             android:exported="false" />

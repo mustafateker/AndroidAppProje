@@ -1,5 +1,6 @@
 package com.crossborders.studyhard
 
+
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -16,6 +17,7 @@ import androidx.core.app.NotificationCompat
 
 class bunu_unutma : AppCompatActivity() {
 
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     private lateinit var switch: Switch
     private lateinit var checkBox: CheckBox
     private lateinit var notificationManager: NotificationManager
@@ -29,8 +31,7 @@ class bunu_unutma : AppCompatActivity() {
         checkBox = findViewById(R.id.checkbox)
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-
-        createNotificationChannel()
+        createNotificationChannel() // Bildirim kanalını oluştur
 
         switch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -45,6 +46,11 @@ class bunu_unutma : AppCompatActivity() {
         }
     }
 
+
+
+
+
+
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
@@ -54,14 +60,18 @@ class bunu_unutma : AppCompatActivity() {
             ).apply {
                 description = "Channel Description"
             }
-
             notificationManager.createNotificationChannel(channel)
         }
     }
 
     private fun sendNotification(message: String) {
-        val intent = Intent(this, bunu_unutma::class.java)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val intent = Intent(this, bunu_unutma::class.java) // Hedef aktiviteyi belirle
+        val pendingIntent = PendingIntent.getActivity(
+            this,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT
+        )
 
         val builder = NotificationCompat.Builder(this, notificationChannelId)
             .setContentTitle("Bilgilendirme")
@@ -70,5 +80,6 @@ class bunu_unutma : AppCompatActivity() {
             .setAutoCancel(true)
 
         notificationManager.notify(1, builder.build())
-        }
+    }
+
 }
