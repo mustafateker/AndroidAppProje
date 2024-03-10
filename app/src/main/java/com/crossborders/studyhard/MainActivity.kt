@@ -1,6 +1,4 @@
 package com.crossborders.studyhard
-
-
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -19,13 +17,14 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import android.widget.PopupMenu
 import android.view.View
+import androidx.lifecycle.findViewTreeViewModelStoreOwner
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val menuInflater = menuInflater
+        val menuInflater = getMenuInflater()
         menuInflater.inflate(R.menu.ana_menu,menu)
         return super.onCreateOptionsMenu(menu)
     }
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.cikis_yap){
             auth.signOut()
-            val intent = Intent(this,MainActivity::class.java)
+            val Intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -67,21 +66,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        auth =Firebase.auth
+        auth = Firebase.auth
 
 
         // Hoş geldin User_name yazdırma
         val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
         if (user != null) {
-            val username = user.email?.split("@")?.get(0) ?: "Guest"
-            val metin = "Hoş geldin $username"
+            val Username = user.email?.split("@")?.get(0) ?: "Guest"
+            val metin = "Hoş geldin $Username"
             val welcomeUserText: TextView = findViewById(R.id.textView)
             welcomeUserText.text = metin
         }
 
         val fontResourceId = R.font.libre_franklin_semibold
-        findViewById<TextView>(R.id.textView).typeface = ResourcesCompat.getFont(this, fontResourceId)
+        findViewById<TextView>(R.id.textView).typeface =
+            ResourcesCompat.getFont(this, fontResourceId)
         findViewById<TextView>(R.id.textView).setTextSize(TypedValue.COMPLEX_UNIT_SP, 27.toFloat())
 
         /*val playfairItalic = R.font.open_sans_regular
@@ -89,14 +89,24 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.gunun_sozu).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25.toFloat())*/
 
         val codepro = R.font.montserrat_extra_bold
-        findViewById<TextView>(R.id.gunTextView).typeface = ResourcesCompat.getFont(this , codepro)
-        findViewById<TextView>(R.id.gunTextView).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 50.toFloat())
+        findViewById<TextView>(R.id.gunTextView).typeface = ResourcesCompat.getFont(this, codepro)
+        findViewById<TextView>(R.id.gunTextView).setTextSize(
+            TypedValue.COMPLEX_UNIT_DIP,
+            50.toFloat()
+        )
 
-        findViewById<TextView>(R.id.saatTextView).typeface = ResourcesCompat.getFont(this , codepro)
-        findViewById<TextView>(R.id.saatTextView).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 50.toFloat())
+        findViewById<TextView>(R.id.saatTextView).typeface = ResourcesCompat.getFont(this, codepro)
+        findViewById<TextView>(R.id.saatTextView).setTextSize(
+            TypedValue.COMPLEX_UNIT_DIP,
+            50.toFloat()
+        )
 
-        findViewById<TextView>(R.id.dakikaTextView).typeface = ResourcesCompat.getFont(this , codepro)
-        findViewById<TextView>(R.id.dakikaTextView).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 50.toFloat())
+        findViewById<TextView>(R.id.dakikaTextView).typeface =
+            ResourcesCompat.getFont(this, codepro)
+        findViewById<TextView>(R.id.dakikaTextView).setTextSize(
+            TypedValue.COMPLEX_UNIT_DIP,
+            50.toFloat()
+        )
 
 
         // Geri sayım
@@ -132,30 +142,28 @@ class MainActivity : AppCompatActivity() {
         }.start()
 
 
-        val denemeNetHesapla : ImageButton =findViewById(R.id.deneme_hesapla)
-        denemeNetHesapla.setOnClickListener(){
-            val denemeNetHesaplaPage = Intent(applicationContext,deneme_net_hesapla::class.java)
+        val denemeNetHesapla: ImageButton = findViewById(R.id.deneme_hesapla)
+        denemeNetHesapla.setOnClickListener() {
+            val denemeNetHesaplaPage = Intent(applicationContext, deneme_net_hesapla::class.java)
             startActivity(denemeNetHesaplaPage)
         }
-        val bunu_unutma_page : ImageButton= findViewById(R.id.level)
-        bunu_unutma_page.setOnClickListener(){
-            val bunu_unutmaPage = Intent(applicationContext,bunu_unutma::class.java)
+        val bunu_unutma_page: ImageButton = findViewById(R.id.level)
+        bunu_unutma_page.setOnClickListener() {
+            val bunu_unutmaPage = Intent(applicationContext, bunu_unutma::class.java)
             startActivity(bunu_unutmaPage)
         }
-        val gecmisDenemeler : ImageButton = findViewById(R.id.gecmis_denemeler)
+
+        val gecmisDenemeler: ImageButton = findViewById(R.id.gecmis_denemeler)
         gecmisDenemeler.setOnClickListener() {
             val gecmisDenemelerPage = Intent(applicationContext, gecmis_denemeler::class.java)
             startActivity(gecmisDenemelerPage)
         }
-        val performansim_Page : ImageButton = findViewById(R.id.performansim)
-        performansim_Page.setOnClickListener(){
-            Intent(applicationContext, PerformansimPage::class.java)
+
+        val Performansim_Page : ImageButton = findViewById(R.id.performansim)
+        Performansim_Page.setOnClickListener(){
+            val performansimPage_ = Intent(applicationContext, PerformansimPage ::class.java)
+            startActivity(performansimPage_)
         }
-
-
-
-
     }
-
 
 }

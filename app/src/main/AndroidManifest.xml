@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,9 +19,8 @@
         <activity
             android:name=".PerformansimPage"
             android:exported="false" />
-        <activity
-            android:name=".performansim_page"
-            android:exported="false" />
+
+
         <activity
             android:name=".deneme_net_hesapla"
             android:exported="false" />
