@@ -1,5 +1,4 @@
 package com.crossborders.studyhard
-import PerformansimPage
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -18,7 +17,6 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import android.widget.PopupMenu
 import android.view.View
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
 
 class MainActivity : AppCompatActivity() {
 
@@ -162,7 +160,7 @@ class MainActivity : AppCompatActivity() {
 
         val Performansim_Page : ImageButton = findViewById(R.id.performansim)
         Performansim_Page.setOnClickListener(){
-            val performansimPage_ = Intent(applicationContext, PerformansimPage ::class.java)
+            val performansimPage_ = Intent(applicationContext, Performansim_Pages ::class.java)
             startActivity(performansimPage_)
         }
     }

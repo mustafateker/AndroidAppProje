@@ -1,3 +1,5 @@
+package com.crossborders.studyhard
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -6,17 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.crossborders.studyhard.R
-import com.crossborders.studyhard.WeeklyFragment
-import com.crossborders.studyhard.databinding.ActivityPerformansimPageBinding
 
-class PerformansimPage : AppCompatActivity() {
-
+class Performansim_Pages : AppCompatActivity() {
     private lateinit var viewPager: ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_performansim_page)
+        setContentView(R.layout.activity_performansim_pages)
 
         viewPager = findViewById(R.id.view_pager)
         setupViewPager()
@@ -29,8 +27,8 @@ class PerformansimPage : AppCompatActivity() {
 
     private fun setupViewPager() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(WeeklyFragment(), "Weekly")
-        // Diğer fragmentları da ekleyebilirsiniz.
+        adapter.addFragment(WeeklyFragment(), "Haftalık")
+        adapter.addFragment(MonthlyFragment(), "Aylık")
         viewPager.adapter = adapter
     }
 

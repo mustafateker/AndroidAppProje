@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="410dp"
+    android:layout_height="731dp"
+    tools:context=".Performansim_Pages"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="413dp"
+        android:layout_height="647dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/view_pager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="416dp"
+            android:layout_height="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:contentDescription="@string/tab_layour"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </androidx.viewpager.widget.ViewPager>
+
+    <ImageView
+        android:id="@+id/performansim_menu_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Performansım menu bar"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/main_top_fon_revize"
+        tools:ignore="HardcodedText,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/performansim_title"
+        android:layout_width="307dp"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:text="@string/performansim"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/performansim_menu_bar"
+        app:layout_constraintEnd_toEndOf="@id/performansim_menu_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/performansim_app_logo"
+        android:layout_width="86dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="4dp"
+        android:contentDescription="app logo"
+        app:layout_constraintBottom_toBottomOf="@id/performansim_menu_bar"
+        app:layout_constraintEnd_toStartOf="@+id/performansim_title"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@id/performansim_menu_bar"
+        app:layout_constraintTop_toTopOf="@+id/performansim_menu_bar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/app_icon__main_top"
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
