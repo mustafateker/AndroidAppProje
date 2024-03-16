@@ -22,4 +22,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layour">Tab Layout</string>
     <string name="view_pager">View Page</string>
+    <string name="tukrce_net_hesapla">Türkçe Net Hesapla</string>
+    <string name="TYT_net_hesapla_page">TYT Deneme Net Hesapla</string>
+    <string name="tyt_net_hesapla_scroll">tyt deneme hesapla sayfası</string>
 </resources>

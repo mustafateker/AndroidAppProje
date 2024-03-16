@@ -17,6 +17,10 @@
         android:theme="@style/Theme.AndroidProje"
         tools:targetApi="31">
         <activity
+            android:name=".turkce_deneme_net_hesapla"
+            android:exported="false" />
+
+        <activity
             android:name=".PerformansimPage"
             android:exported="false" />
         <activity
