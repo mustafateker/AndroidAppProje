@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DenemeEkle">
+
+    <ImageView
+        android:id="@+id/tyt_deneme_hesapla_head_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/anamenutop"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_top_fon_revize"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="65dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/text_yazi"
+        app:layout_constraintStart_toStartOf="@id/tyt_deneme_hesapla_head_bar"
+        app:layout_constraintTop_toTopOf="@id/tyt_deneme_hesapla_head_bar"
+        app:srcCompat="@drawable/app_icon__main_top"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/text_yazi"
+        android:layout_width="317dp"
+        android:layout_height="81dp"
+        android:gravity="center_vertical"
+        android:text="Deneme Hesapla"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="@+id/tyt_deneme_hesapla_head_bar"
+        app:layout_constraintTop_toTopOf="@id/tyt_deneme_hesapla_head_bar"
+        tools:layout_editor_absoluteX="92dp"
+        app:layout_constraintBottom_toBottomOf="@id/tyt_deneme_hesapla_head_bar"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/deneme_adi_id"
+        android:layout_width="377dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Deneme Adı"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/deneme_no_id"
+        app:layout_constraintStart_toStartOf="@+id/deneme_no_id"
+        app:layout_constraintTop_toBottomOf="@+id/deneme_no_id" />
+
+    <EditText
+        android:id="@+id/deneme_no_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Deneme No"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/deneme_tarihi_id"
+        android:layout_width="376dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Deneme Tarihi"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/deneme_adi_id"
+        app:layout_constraintStart_toStartOf="@+id/deneme_adi_id"
+        app:layout_constraintTop_toBottomOf="@+id/deneme_adi_id" />
+
+    <EditText
+        android:id="@+id/net_sayisi_id"
+        android:layout_width="374dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Net Sayısı"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/deneme_tarihi_id"
+        app:layout_constraintStart_toStartOf="@+id/deneme_tarihi_id"
+        app:layout_constraintTop_toBottomOf="@+id/deneme_tarihi_id" />
+
+    <Button
+        android:id="@+id/buton_ekle_id"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Ekle"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/net_sayisi_id"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/net_sayisi_id"
+        app:layout_constraintTop_toBottomOf="@+id/net_sayisi_id"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <TextView
+        android:id="@+id/tvsonuc_id"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="16dp"
+        android:text="Eklenen Denemeler"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/buton_ekle_id"
+        app:layout_constraintStart_toStartOf="@+id/buton_ekle_id"
+        app:layout_constraintTop_toBottomOf="@+id/net_sayisi_id" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

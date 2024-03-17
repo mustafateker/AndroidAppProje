@@ -29,15 +29,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.cikis_yap){
-            auth.signOut()
-            val Intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        when (item.itemId) {
+            R.id.cikis_yap -> {
+                auth.signOut()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
         }
 
-        return super.onOptionsItemSelected(item)
+
+
     }
+
+
     fun showPopupMenu(view: View) {
         val popupMenu = PopupMenu(this, view)
         val inflater = popupMenu.menuInflater
@@ -55,12 +62,23 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false // tanımlanmış bir öğe değilse false döndürüyoruz
             }
+
+            when (item.itemId) {
+                R.id.deneme_ekle -> {
+                    val intent = Intent(this, DenemeEkle::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> false
+            }
         }
         popupMenu.show()
     }
 
 
-    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
