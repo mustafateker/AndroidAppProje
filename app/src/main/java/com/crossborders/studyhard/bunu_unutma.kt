@@ -12,13 +12,14 @@ import android.os.Bundle
 import android.widget.CheckBox
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.app.NotificationCompat
 
 
 class bunu_unutma : AppCompatActivity() {
 
     @SuppressLint("UseSwitchCompatOrMaterialCode")
-    private lateinit var switch: Switch
+    private lateinit var switch: SwitchCompat
     private lateinit var checkBox: CheckBox
     private lateinit var notificationManager: NotificationManager
     private val notificationChannelId = "10001"
@@ -77,7 +78,9 @@ class bunu_unutma : AppCompatActivity() {
             .setContentTitle("Bilgilendirme")
             .setContentText(message)
             .setContentIntent(pendingIntent)
+            .setSmallIcon(R.drawable.app_icon__main_top)
             .setAutoCancel(true)
+
 
         notificationManager.notify(1, builder.build())
     }
