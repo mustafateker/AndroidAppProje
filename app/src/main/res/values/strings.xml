@@ -32,4 +32,10 @@
     <string name="bos_sayisi_textView">Boş</string>
     <string name="matemtaik_net_hesapla">Matematik Net Hesapla</string>
     <string name="hesaplaButton">Hesapla</string>
+    <string name="ayarlar_button">Ayarlar</string>
+    <string name="sifre_tekrar">Şifre Tekrar</string>
+    <string name="yeni_sifre">Yeni Şifre</string>
+    <string name="mevcut_sifre">Mevcut şifre</string>
+    <string name="sifre_degistir">Şifre Değiştir</string>
+    <string name="kaydet">KAYDET</string>
 </resources>

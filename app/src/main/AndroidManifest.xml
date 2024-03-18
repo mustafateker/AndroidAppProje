@@ -16,6 +16,13 @@
         android:theme="@style/Theme.AndroidProje"
         tools:targetApi="31" >
         <activity
+            android:name=".passwordChange"
+            android:exported="false" />
+        <activity
+            android:name=".ayarlar_button"
+            android:exported="false" />
+
+        <activity
             android:name=".DenemeEkle"
             android:exported="false" />
 

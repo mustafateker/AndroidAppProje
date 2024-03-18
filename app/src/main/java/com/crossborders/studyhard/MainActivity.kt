@@ -74,6 +74,19 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+            when (item.itemId) {
+                R.id.ayarlar -> {
+                    val intent = Intent(this, ayarlar_button::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    startActivity(intent)
+                    finish()
+                    true // true döndürerek işlemin başarılı olduğunu belirtiyoruz
+                }
+
+                else -> false // tanımlanmış bir öğe değilse false döndürüyoruz
+
+            }
         }
         popupMenu.show()
     }

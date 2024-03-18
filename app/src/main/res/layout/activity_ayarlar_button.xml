@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ayarlar_button">
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_top_fon_ImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/main_top_fon_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/anamenutop"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_top_fon_revize"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/performansim_app_logo"
+        android:layout_width="88dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="app logo"
+
+        app:srcCompat="@drawable/app_icon__main_top"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/ayarlar_button"
+        android:textColor="@color/white"
+        android:textSize="39sp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_top_fon_ImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
