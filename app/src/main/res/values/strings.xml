@@ -25,4 +25,11 @@
     <string name="tukrce_net_hesapla">Türkçe Net Hesapla</string>
     <string name="TYT_net_hesapla_page">TYT Deneme Net Hesapla</string>
     <string name="tyt_net_hesapla_scroll">tyt deneme hesapla sayfası</string>
+    <string name="tyt_deneme_hesapla_page_bar">TYT Deneme Net Hesapla</string>
+    <string name="dogru_cevap_sayisi">Doğru Cevap Sayısı</string>
+    <string name="yanl_cevap">Yanlış Sayısı</string>
+    <string name="bos_sayisi">Boş Sayısı</string>
+    <string name="bos_sayisi_textView">Boş</string>
+    <string name="matemtaik_net_hesapla">Matematik Net Hesapla</string>
+    <string name="hesaplaButton">Hesapla</string>
 </resources>

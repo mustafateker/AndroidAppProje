@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,209 +14,373 @@
         android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="4dp"
         android:contentDescription="@string/anamenutop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_top_fon_revize"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/main_top_fon_revize" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="320dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:text="@string/TYT_net_hesapla_page"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="65dp"
         android:layout_height="63dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="12dp"
         android:contentDescription="TODO"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="@+id/tyt_deneme_hesapla_head_bar"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@id/tyt_deneme_hesapla_head_bar"
         app:layout_constraintTop_toTopOf="@id/tyt_deneme_hesapla_head_bar"
-        app:srcCompat="@drawable/app_icon__main_top"
-        tools:ignore="ContentDescription,HardcodedText" />
+        app:srcCompat="@drawable/app_icon__main_top" />
 
-    <TextView
-        android:id="@+id/text_yazi"
-        android:layout_width="326dp"
-        android:layout_height="49dp"
-        android:gravity="center_vertical"
-        android:text="@string/TYT_net_hesapla_page"
-        android:textColor="@color/white"
-        android:textSize="27sp"
-        tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
-        android:layout_width="413dp"
-        android:layout_height="640dp"
-        android:contentDescription="@string/tyt_net_hesapla_scroll"
+        android:id="@+id/TYT_Deneme_Hesapla_Scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="635dp"
+        android:contentDescription="Scroll view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/tyt_deneme_hesapla_head_bar">
 
+        <LinearLayout
+            android:id="@+id/tytDenemeHesaplaLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-
-            android:layout_width="408dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="0dp"
-            tools:ignore="ExtraText">
-
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="412dp"
-                android:layout_height="416dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/turkce_net_hesaplama"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:ignore="ContentDescription,HardcodedText,MissingConstraints"
-                tools:layout_editor_absoluteX="-2dp" />
-
-            <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="87dp"
-                android:layout_height="83dp"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/app_icon__main_top"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/textView14"
-                tools:ignore="ContentDescription,HardcodedText,MissingConstraints"
-                tools:layout_editor_absoluteX="-6dp"
-                tools:layout_editor_absoluteY="89dp" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="326dp"
-                android:layout_height="83dp"
-                android:gravity="center_vertical"
-                android:text="@string/tukrce_net_hesapla"
-                android:textAlignment="gravity"
-                android:textColor="@color/black"
-                android:textSize="30sp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="408dp"
+                android:layout_height="451dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintBottom_toTopOf="@+id/HesaplaButton"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="MissingConstraints,TextSizeCheck"
-                tools:layout_editor_absoluteY="89dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/scrollView2"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <!-- Türkçe Net Hesapla -->
+
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="16dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/textView14"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/turkishNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Net sayısı "
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout2" />
+
+                <TextView
+                    android:id="@+id/turkishCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/turkishCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout2" />
+
+
+                <TextView
+                    android:id="@+id/turkishWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/turkishWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:allowUndo="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/turkishCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout2" />
+
+                <TextView
+                    android:id="@+id/turkishEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishNet"
+                    app:layout_constraintEnd_toStartOf="@+id/turkishEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout2" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tukrce_net_hesapla"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.313" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/turkishCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/turkishWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/turkishEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/turkishEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/turkishNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/matematikLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/matematikIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/MatematikTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/matematikNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Net sayısı "
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/matematikLayout" />
+
+                <TextView
+                    android:id="@+id/matematikCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/matematikCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/matematikLayout" />
+
+
+                <TextView
+                    android:id="@+id/matematikWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/matematikWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:allowUndo="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/matematikCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/matematikLayout" />
+
+                <TextView
+                    android:id="@+id/matematikEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikNet"
+                    app:layout_constraintEnd_toStartOf="@+id/matematikEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/matematikLayout" />
+
+                <TextView
+                    android:id="@+id/MatematikTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/matemtaik_net_hesapla"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/matematikCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/matematikWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/matematikEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/matematikEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/matematikNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sosyalNetHesaplaLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/HesaplaButton"
+                android:layout_width="138dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="108dp"
+                android:background="#256DFB"
+                android:text="@string/hesaplaButton"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.941"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ExtraText" />
+        </LinearLayout>
 
 
 
-            <EditText
-                android:id="@+id/turkishNet"
-                android:layout_width="408dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishEmptySpinner"
-                android:layout_weight="1"
-                android:hint="net sayısı "
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                tools:ignore="Autofill,HardcodedText,MissingConstraints,TextFields"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="389dp" />
-
-            <Spinner
-                android:id="@+id/mySpinner"
-                android:layout_width="78dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishNet"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:minHeight="48dp"
-                tools:ignore="DuplicateIds,MissingConstraints"
-                tools:layout_editor_absoluteX="329dp"
-                tools:layout_editor_absoluteY="389dp"
-                android:focusable="true" />
-
-            <EditText
-                android:id="@+id/turkishEmpty"
-                android:layout_width="408dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishWrongSpinner"
-                android:layout_weight="1"
-                android:hint="boş sayısı"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                tools:ignore="Autofill,HardcodedText,MissingConstraints,TextFields"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="328dp" />
-
-            <Spinner
-                android:id="@+id/turkishEmptySpinner"
-                android:layout_width="78dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishEmpty"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:minHeight="48dp"
-                tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck"
-                tools:layout_editor_absoluteX="329dp"
-                tools:layout_editor_absoluteY="328dp" />
-
-            <EditText
-                android:id="@+id/turkishWrong"
-                android:layout_width="408dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishCorrectSpinner"
-                android:layout_weight="1"
-                android:hint="yanlış cevap sayısı "
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                tools:ignore="Autofill,HardcodedText,MissingConstraints,TextFields"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="261dp" />
-
-            <Spinner
-                android:id="@+id/turkishWrongSpinner"
-                android:layout_width="78dp"
-                android:layout_height="63dp"
-                android:layout_below="@id/turkishWrong"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:minHeight="48dp"
-                tools:ignore="DuplicateIds,MissingConstraints"
-                tools:layout_editor_absoluteX="329dp"
-                tools:layout_editor_absoluteY="261dp" />
-
-            <EditText
-                android:id="@+id/turkishCorrect"
-                android:layout_width="408dp"
-                android:layout_height="63dp"
-                android:layout_weight="1"
-                android:hint="doğru cevap sayısı "
-                android:minHeight="48dp"
-                android:clickable="true"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                tools:ignore="Autofill,HardcodedText,MissingConstraints,TextFields"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="198dp" />
-
-            <Spinner
-                android:id="@+id/turkishCorrectSpinner"
-                android:layout_width="78dp"
-                android:layout_height="63dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:minHeight="48dp"
-                tools:ignore="DuplicateIds,MissingConstraints,DuplicateClickableBoundsCheck"
-                tools:layout_editor_absoluteX="329dp"
-                tools:layout_editor_absoluteY="196dp" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
