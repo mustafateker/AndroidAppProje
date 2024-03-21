@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="320dp"
-        android:layout_height="58dp"
+        android:layout_width="319dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="4dp"
         android:gravity="center_vertical"
         android:text="@string/TYT_net_hesapla_page"
@@ -58,8 +58,10 @@
         android:contentDescription="Scroll view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tyt_deneme_hesapla_head_bar">
+        app:layout_constraintTop_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/tytDenemeHesaplaLinearLayout"
@@ -357,27 +359,326 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/sosyalNetHesaplaLayout"
+                android:id="@+id/sosyalLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="451dp">
 
+                <ImageView
+                    android:id="@+id/sosyalIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/sosyalTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/sosyalNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Net sayısı "
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/sosyalLayout" />
+
+                <TextView
+                    android:id="@+id/sosyalCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/sosyalCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/sosyalLayout" />
+
+
+                <TextView
+                    android:id="@+id/sosyalWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/sosyalWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:allowUndo="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/sosyalCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/sosyalLayout" />
+
+                <TextView
+                    android:id="@+id/sosyalEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalNet"
+                    app:layout_constraintEnd_toStartOf="@+id/sosyalEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/sosyalLayout" />
+
+                <TextView
+                    android:id="@+id/sosyalTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Sosyal"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sosyalCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sosyalWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/sosyalEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/sosyalEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/sosyalNet" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/HesaplaButton"
-                android:layout_width="138dp"
-                android:layout_height="48dp"
-                android:layout_marginBottom="108dp"
-                android:background="#256DFB"
-                android:text="@string/hesaplaButton"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.941"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="ExtraText" />
-        </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/FenLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
 
+                <ImageView
+                    android:id="@+id/FenIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/FenCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/FenTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/FenNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Net sayısı "
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/FenLayout" />
+
+                <TextView
+                    android:id="@+id/FenCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/FenCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/FenLayout" />
+
+
+                <TextView
+                    android:id="@+id/FenWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/FenWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:allowUndo="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/FenCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/FenLayout" />
+
+                <TextView
+                    android:id="@+id/FenEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenNet"
+                    app:layout_constraintEnd_toStartOf="@+id/FenEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/FenLayout" />
+
+                <TextView
+                    android:id="@+id/FenTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Fen"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/FenCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/FenWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/FenEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/FenEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/FenNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/HesaplaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+
+                <TextView
+                    android:id="@+id/genelNet"
+                    android:layout_width="131dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginStart="40dp"
+                    android:hint="@string/genel_net"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/HesaplaButton"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.201" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/HesaplaButton"
+                    android:layout_width="131dp"
+                    android:layout_height="48dp"
+
+                    android:layout_marginEnd="40dp"
+                    android:background="#256DFB"
+                    android:text="@string/hesaplaButton"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.201"
+                    tools:ignore="ExtraText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
 
 
     </androidx.core.widget.NestedScrollView>
