@@ -1,8 +1,8 @@
 package com.crossborders.studyhard
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
@@ -17,11 +17,16 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import android.widget.PopupMenu
 import android.view.View
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-
+    private lateinit var mReferance : DatabaseReference
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val menuInflater = getMenuInflater()
         menuInflater.inflate(R.menu.ana_menu,menu)
@@ -98,16 +103,38 @@ class MainActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        val currentUID = FirebaseAuth.getInstance().uid.toString()
+        mReferance = FirebaseDatabase.getInstance().getReference().child("users/$currentUID/user_info/user_adi")
+        mReferance.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot){
+                if(snapshot.exists()){
+                    val username = snapshot.getValue(String::class.java) ?:""
+                    val WelcomeText = "Hoş geldin $username"
+                    val welcomeText : TextView = findViewById(R.id.textView)
+                    welcomeText.text = WelcomeText
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("Firebase", "Veri okuma hatası: ${error.message}")
+                Log.e("Firebase", "Details: ${error.details}")
+                Log.e("Firebase", "Code: ${error.code}")
+            }
+
+        })
+
+
+
 
         // Hoş geldin User_name yazdırma
-        val firebaseAuth = FirebaseAuth.getInstance()
+        /*val firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
         if (user != null) {
             val Username = user.email?.split("@")?.get(0) ?: "Guest"
             val metin = "Hoş geldin $Username"
             val welcomeUserText: TextView = findViewById(R.id.textView)
             welcomeUserText.text = metin
-        }
+        }*/
 
         val fontResourceId = R.font.libre_franklin_semibold
         findViewById<TextView>(R.id.textView).typeface =

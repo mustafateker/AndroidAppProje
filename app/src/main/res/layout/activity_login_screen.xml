@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/app_design_revize"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login_Screen"
+    android:orientation="vertical"
     tools:ignore="ExtraText">
 
 
-    <ImageView
-
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="H,16:9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_design_revize"
-        tools:ignore="MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteX="16dp" />
+    <TextView
+        android:id="@+id/GirisTittle"
+        android:layout_width="209dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal"
+        android:autoSizeMinTextSize="50sp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Giriş"
+        android:textColor="#F6F3F3"
+        android:textColorHighlight="#FAF7F7"
+        android:textSize="50sp"
+        android:visibility="visible"
+        app:barrierAllowsGoneWidgets="false"
+        app:chainUseRtl="false"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/UsernameText"
         android:layout_width="365dp"
         android:layout_height="73dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:autofillHints="true"
         android:background="@drawable/edit_text_background"
         android:backgroundTint="#00FFFFFF"
@@ -36,7 +42,7 @@
         android:cursorVisible="false"
         android:ems="10"
         android:hapticFeedbackEnabled="true"
-        android:hint="@string/kullan_c_ad"
+        android:hint="@string/loginkullanici_email_or_username"
         android:inputType="text"
         android:isScrollContainer="false"
         android:scrollbars="none"
@@ -47,99 +53,66 @@
         android:visibility="visible"
         app:barrierAllowsGoneWidgets="false"
         app:chainUseRtl="false"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.007"
         tools:visibility="visible" />
 
 
-    <CheckBox
-        android:id="@+id/BeniHatirla"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="32dp"
-        android:buttonTint="#FFFFFF"
-        android:text="Beni Hatırla "
-        android:textColor="#F3F3F3"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hemenKaydolLink"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/GirisTittle"
-        android:layout_width="209dp"
-        android:layout_height="81dp"
-        android:autoSizeMinTextSize="50sp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
 
 
-        android:text="Giriş"
-        android:textColor="#F6F3F3"
-        android:textColorHighlight="#FAF7F7"
-        android:textSize="50sp"
-        android:visibility="visible"
-        app:barrierAllowsGoneWidgets="false"
-        app:chainUseRtl="false"
-        app:layout_constraintBottom_toTopOf="@+id/UsernameText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.906"
-        tools:ignore="MissingConstraints" />
+
+
 
     <EditText
         android:id="@+id/Parola1"
         android:layout_width="365dp"
         android:layout_height="73dp"
-        android:layout_marginTop="32dp"
-        android:allowUndo="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:autofillHints=""
         android:background="@drawable/edit_text_background"
         android:ems="10"
-        android:forceHasOverlappingRendering="false"
         android:hint="@string/parola"
-        android:hyphenationFrequency="none"
         android:inputType="textPassword"
         android:isScrollContainer="false"
         android:linksClickable="false"
         android:longClickable="true"
         android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameText" />
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parolami_unuttum"
+        android:layout_width="308dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="hemenKaydolClicked"
+        android:text="@string/parolami_unuttum"
+        android:textColor="#FFFEFC"
+        android:textColorHighlight="#FAF6F6"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="@color/white"
+        android:textSize="16sp"
+        tools:ignore="TextSizeCheck" />
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="365dp"
         android:layout_height="73dp"
-        android:layout_marginBottom="132dp"
+        android:layout_gravity="center_horizontal"
         android:text="@string/giris"
         android:textSize="20sp"
         android:backgroundTint="#0D1831"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Parola1"
-        app:layout_constraintVertical_bias="0.463"
         tools:ignore="VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/hemenKaydolLink"
-        android:layout_width="307dp"
+        android:layout_width="308dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:autoLink="web"
         android:clickable="true"
         android:focusable="true"
@@ -150,12 +123,15 @@
         android:textColorHint="#FFFFFF"
         android:textColorLink="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.09"
         tools:ignore="TextSizeCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckBox
+        android:id="@+id/BeniHatirla"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:buttonTint="#FFFFFF"
+        android:text="Beni Hatırla "
+        android:textColor="#F3F3F3" />
+
+</LinearLayout>

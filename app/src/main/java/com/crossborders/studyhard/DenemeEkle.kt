@@ -1,13 +1,16 @@
 package com.crossborders.studyhard
-
 import android.app.AlertDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.crossborders.studyhard.databinding.ActivityDenemeEkle2Binding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth.*
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
 import java.util.*
-
+//FirebaseAuth.getInstance().currentUser.uid //lazım olacaka user id ile verilere erişme
 class DenemeEkle : AppCompatActivity() {
     private lateinit var binding: ActivityDenemeEkle2Binding
     private lateinit var database: DatabaseReference
@@ -17,7 +20,9 @@ class DenemeEkle : AppCompatActivity() {
         binding = ActivityDenemeEkle2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        database = FirebaseDatabase.getInstance().getReference("denemeler")
+        val current_user_id = FirebaseAuth.getInstance().uid.toString()
+        val denemeler = "user_denemeler"
+        database = FirebaseDatabase.getInstance().getReference("users").child(current_user_id).child(denemeler)
 
         binding.butonEkleId.setOnClickListener {
             val denemeNo = binding.denemeNoId.text.toString().toIntOrNull() ?: 0
@@ -36,7 +41,6 @@ class DenemeEkle : AppCompatActivity() {
                     "denemeTarihi" to denemeTarihi,
                     "netSayisi" to netSayisi
                 )
-
                 database.child(denemeNo.toString()).setValue(yeniDeneme)
             } else {
                 // Geçersiz tarih girişi olduğunda kullanıcıya uyarı mesajı göster

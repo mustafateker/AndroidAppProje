@@ -5,8 +5,13 @@
     <string name="parola">Parola</string>
     <string name="parolatekrar">Parola Tekrar</string>
     <string name="todo">TODO</string>
-    <string name="kullan_c_ad">E-mail</string>
+    <string name="kullanici_ad">Ad</string>
+    <string name="kullanici_soyad">Soyad</string>
+    <string name="kullanici_e_mail">E-mail</string>
+    <string name="loginkullanici_email_or_username">Kullanıcı Adı veya E-mail</string>
+    <string name="kullanici_nickname">Kullanıcı Adı</string>
     <string name="hesab_n_z_yok_mu_hemen_kaydolun">Hesabınız yok mu? Hemen Kaydolun</string>
+    <string name="parolami_unuttum">Parolamı unuttum</string>
     <string name="hos_geldin_user_id">Hos geldin /USER</string>
     <string name="ozlu_soz_1">En zor kararları yalnızca en güçlü iradeler verebilir.</string>
     <string name="anamenutop">Ana menü top menü background</string>
@@ -18,7 +23,6 @@
     <string name="dakika">Dakika</string>
     <string name="performansim">Performansım</string>
     <string name="performansim_scroll">performansım menu scroll</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layour">Tab Layout</string>
     <string name="view_pager">View Page</string>
@@ -39,4 +43,6 @@
     <string name="sifre_degistir">Şifre Değiştir</string>
     <string name="kaydet">KAYDET</string>
     <string name="genel_net">Genel Net</string>
+    <string name="soyad_description">Soyad giriniz</string>
+    <string name="ad_description">Ad Giriniz</string>
 </resources>

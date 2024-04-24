@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -24,8 +25,9 @@ class gecmis_denemeler : AppCompatActivity() {
         denemeAdapter = DenemeAdapter(denemeList)
         recyclerView.adapter = denemeAdapter
 
+        val currentUserId =FirebaseAuth.getInstance().uid.toString()
         // Firebase veritabanı referansı
-        database = FirebaseDatabase.getInstance().getReference("denemeler")
+        database = FirebaseDatabase.getInstance().getReference("users/$currentUserId/user_denemeler")
 
         // Firebase'den verileri çek ve RecyclerView'a ekle
         database.addValueEventListener(object : ValueEventListener {
