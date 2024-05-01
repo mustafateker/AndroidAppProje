@@ -4,8 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.crossborders.studyhard.databinding.ActivityDenemeEkle2Binding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuth.*
-import com.google.firebase.auth.FirebaseUser
+
 import com.google.firebase.database.*
 import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
@@ -50,7 +49,7 @@ class DenemeEkle : AppCompatActivity() {
 
         val getdata = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                var sb = StringBuilder()
+                val sb = StringBuilder()
                 for (i in snapshot.children) {
                     val adSoyad = i.child("denemeAdi").getValue(String::class.java)
                     val net = i.child("netSayisi").getValue(Double::class.java)

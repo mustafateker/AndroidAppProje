@@ -2,17 +2,24 @@ package com.crossborders.studyhard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.annotation.SuppressLint
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View // Eklenen import
 import android.widget.AdapterView // Eklenen import
 import android.widget.ArrayAdapter
-import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.content.res.ResourcesCompat
+import androidx.appcompat.widget.AppCompatEditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import java.util.UUID
 
 
 class turkce_deneme_net_hesapla: AppCompatActivity() {
@@ -45,7 +52,12 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
 
    private lateinit var ToplamNetTextView:TextView
 
-    private lateinit var hesaplaButton: AppCompatButton
+   private lateinit var hesaplaButton: AppCompatButton
+
+   //kayder butonu
+   private lateinit var denemeAdi : AppCompatEditText
+   private lateinit var kaydetButton : AppCompatButton
+   private lateinit var mReferance : DatabaseReference
 
 
 
@@ -236,6 +248,68 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
         hesaplaButton.setOnClickListener() {
             updateNet()
         }
+
+        //kaydetme ve database'e verileri gönderme sekansı
+        denemeAdi = findViewById(R.id.tyt_deneme_adi_id)
+        kaydetButton = findViewById(R.id.tyt_deneme_kaydet_button)
+
+
+        val current_user_id = FirebaseAuth.getInstance().uid.toString()
+        val denemeler = "user_denemeler"
+        val denemeType = "user_tytdenemeleri"
+
+        mReferance = FirebaseDatabase.getInstance().getReference("users").child(current_user_id).child(denemeler).child(denemeType)
+        //val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+        val currentDate = System.currentTimeMillis()
+        val denemeId = UUID.randomUUID().toString()
+
+        mReferance.addListenerForSingleValueEvent(object : ValueEventListener
+        {
+            override fun onDataChange(datasnapshot: DataSnapshot) {
+                val denemeNo = datasnapshot.childrenCount + 1
+
+
+                kaydetButton.setOnClickListener{
+
+                    val getDenemeAdi = denemeAdi.text.toString()
+                    val turkishNet = turkishNetTextView.text.toString()
+                    val matematikNet = matematikNetTextView.text.toString()
+                    val sostalNet = sosyalNetTextView.text.toString()
+                    val fenNet = fenNetTextView.text.toString()
+                    val genelNet = ToplamNetTextView.text.toString()
+
+                    while (getDenemeAdi.isEmpty() == true){
+                        Toast.makeText(
+                            this@turkce_deneme_net_hesapla,
+                            "Lütfen deneme adi giriniz",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    val yeniTytDeneme = hashMapOf(
+                        "user_tyt_deneme_no" to denemeNo,
+                        "user_tyt_deneme_ID" to denemeId,
+                        "tyt_denemeAdi" to getDenemeAdi,
+                        "tyt_deneme_tarihi" to currentDate,
+                        "tyt_turkishNet" to turkishNet,
+                        "tyt_matematikNet" to matematikNet,
+                        "tyt_sosyalNet" to sostalNet,
+                        "tyt_fenNet" to fenNet,
+                        "tyt_genelNet" to genelNet
+                    )
+                    mReferance.child(denemeId).setValue(yeniTytDeneme)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("Firebase", "Veri okuma hatası: ${error.message}")
+                Log.e("Firebase", "Details: ${error.details}")
+                Log.e("Firebase", "Code: ${error.code}")
+
+            }
+        })
+
+
+
     }
 
     //turkce private fun/////////////////////

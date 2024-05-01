@@ -41,7 +41,7 @@
         android:layout_width="65dp"
         android:layout_height="63dp"
         android:layout_marginStart="5dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
@@ -55,14 +55,13 @@
         android:id="@+id/TYT_Deneme_Hesapla_Scroll"
         android:layout_width="wrap_content"
         android:layout_height="635dp"
-        android:contentDescription="Scroll view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tyt_deneme_hesapla_head_bar"
         app:layout_constraintVertical_bias="0.0">
-
+        
         <LinearLayout
             android:id="@+id/tytDenemeHesaplaLinearLayout"
             android:layout_width="wrap_content"
@@ -110,7 +109,7 @@
                     android:layout_marginBottom="28dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:hint="Net sayısı "
+                    android:hint="@string/net_sayisi"
                     android:textColor="@color/black"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -139,7 +138,6 @@
                     android:layout_below="@id/turkishWrongSpinner"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:allowUndo="true"
                     android:gravity="center_vertical"
                     android:text="@string/yanl_cevap"
                     android:textColor="@color/black"
@@ -185,7 +183,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/turkishWrongSpinner"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -197,7 +194,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/turkishEmpty"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -249,7 +245,7 @@
                     android:layout_marginBottom="28dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:hint="Net sayısı "
+                    android:hint="@string/net_sayisi"
                     android:textColor="@color/black"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -278,7 +274,6 @@
                     android:layout_below="@id/matematikWrongSpinner"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:allowUndo="true"
                     android:gravity="center_vertical"
                     android:text="@string/yanl_cevap"
                     android:textColor="@color/black"
@@ -325,7 +320,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/matematikWrongSpinner"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -337,7 +331,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/matematikEmpty"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -389,7 +382,7 @@
                     android:layout_marginBottom="28dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:hint="Net sayısı "
+                    android:hint="@string/net_sayisi"
                     android:textColor="@color/black"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -418,7 +411,6 @@
                     android:layout_below="@id/sosyalWrongSpinner"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:allowUndo="true"
                     android:gravity="center_vertical"
                     android:text="@string/yanl_cevap"
                     android:textColor="@color/black"
@@ -465,7 +457,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/sosyalWrongSpinner"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -477,7 +468,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/sosyalEmpty"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -497,6 +487,7 @@
                     app:layout_constraintHorizontal_bias="0.702"
                     app:layout_constraintStart_toEndOf="@+id/sosyalNet" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/FenLayout"
@@ -529,7 +520,7 @@
                     android:layout_marginBottom="28dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:hint="Net sayısı "
+                    android:hint="@string/net_sayisi"
                     android:textColor="@color/black"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -558,7 +549,6 @@
                     android:layout_below="@id/FenWrongSpinner"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:allowUndo="true"
                     android:gravity="center_vertical"
                     android:text="@string/yanl_cevap"
                     android:textColor="@color/black"
@@ -605,7 +595,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/FenWrongSpinner"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -617,7 +606,6 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:minHeight="48dp"
                     app:layout_constraintBottom_toTopOf="@+id/FenEmpty"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -638,21 +626,20 @@
                     app:layout_constraintStart_toEndOf="@+id/FenNet" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/HesaplaLayout"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="63dp">
 
 
                 <TextView
                     android:id="@+id/genelNet"
                     android:layout_width="131dp"
                     android:layout_height="48dp"
-                    android:gravity="center"
-                    android:textSize="20sp"
                     android:layout_marginStart="40dp"
+                    android:gravity="center"
                     android:hint="@string/genel_net"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/HesaplaButton"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -675,9 +662,32 @@
                     app:layout_constraintVertical_bias="0.201"
                     tools:ignore="ExtraText" />
 
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tyt_deneme_adi_id"
+                android:layout_width="287dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="@string/deneme_adi"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tyt_deneme_kaydet_button"
+                android:layout_width="287dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#256DFB"
+                android:text="@string/gecmis_denemelerime_kaydet"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:layout_gravity="center_horizontal"/>
         </LinearLayout>
 
 

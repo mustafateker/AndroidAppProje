@@ -26,7 +26,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layour">Tab Layout</string>
     <string name="view_pager">View Page</string>
-    <string name="tukrce_net_hesapla">Türkçe Net Hesapla</string>
+    <string name="tukrce_net_hesapla">Türkçe</string>
     <string name="TYT_net_hesapla_page">TYT Deneme Net Hesapla</string>
     <string name="tyt_net_hesapla_scroll">tyt deneme hesapla sayfası</string>
     <string name="tyt_deneme_hesapla_page_bar">TYT Deneme Net Hesapla</string>
@@ -34,7 +34,7 @@
     <string name="yanl_cevap">Yanlış Sayısı</string>
     <string name="bos_sayisi">Boş Sayısı</string>
     <string name="bos_sayisi_textView">Boş</string>
-    <string name="matemtaik_net_hesapla">Matematik Net Hesapla</string>
+    <string name="matemtaik_net_hesapla">Matematik</string>
     <string name="hesaplaButton">Hesapla</string>
     <string name="ayarlar_button">Ayarlar</string>
     <string name="sifre_tekrar">Şifre Tekrar</string>
@@ -45,4 +45,7 @@
     <string name="genel_net">Genel Net</string>
     <string name="soyad_description">Soyad giriniz</string>
     <string name="ad_description">Ad Giriniz</string>
+    <string name="gecmis_denemelerime_kaydet">Geçmiş Denemelerime Kaydet</string>
+    <string name="net_sayisi">Net sayısı</string>
+    <string name="deneme_adi">Deneme Adı</string>
 </resources>
