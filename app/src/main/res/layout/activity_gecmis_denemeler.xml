@@ -1,25 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".gecmis_denemeler">
 
-    <androidx.cardview.widget.CardView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gecmis_deneme_menu_bar_const_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/main_activity_recycler_view"
-    android:padding="8dp"/>
+        <ImageView
+            android:id="@+id/gecmis_denemeler_menu_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Performansım menu bar"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/main_top_fon_revize"
+            tools:ignore="HardcodedText,ImageContrastCheck" />
 
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/gecmis_denemeler_title"
+            android:layout_width="307dp"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:text="@string/gecmis_denemeler_menu_bar_tittle"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/gecmis_denemeler_menu_bar"
+            app:layout_constraintEnd_toEndOf="@id/gecmis_denemeler_menu_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/gecmisdenemeler_app_logo"
+            android:layout_width="86dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="app logo"
+            app:layout_constraintBottom_toBottomOf="@id/gecmis_denemeler_menu_bar"
+            app:layout_constraintEnd_toStartOf="@+id/gecmis_denemeler_title"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@id/gecmis_denemeler_menu_bar"
+            app:layout_constraintTop_toTopOf="@+id/gecmis_denemeler_menu_bar"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/app_icon__main_top"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/gecmis_denemeler_view_pager"
+        android:layout_width="413dp"
+        android:layout_height="647dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/view_pager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="416dp"
+            android:layout_height="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:contentDescription="@string/tab_layour"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>

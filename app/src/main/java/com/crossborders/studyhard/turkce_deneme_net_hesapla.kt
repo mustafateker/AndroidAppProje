@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.res.ResourcesCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -65,6 +66,9 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_turkce_deneme_net_hesapla)
 
+        val libreFranklinSemibold = R.font.libre_franklin_semibold
+        findViewById<TextView>(R.id.textView10).typeface =
+            ResourcesCompat.getFont(this, libreFranklinSemibold)
 
 
         turkishCorrectSpinner = findViewById(R.id.turkishCorrectSpinner)
@@ -250,6 +254,7 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
         }
 
         //kaydetme ve database'e verileri gönderme sekansı
+
         denemeAdi = findViewById(R.id.tyt_deneme_adi_id)
         kaydetButton = findViewById(R.id.tyt_deneme_kaydet_button)
 
@@ -259,7 +264,6 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
         val denemeType = "user_tytdenemeleri"
 
         mReferance = FirebaseDatabase.getInstance().getReference("users").child(current_user_id).child(denemeler).child(denemeType)
-        //val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
         val currentDate = System.currentTimeMillis()
         val denemeId = UUID.randomUUID().toString()
 
@@ -297,6 +301,12 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
                         "tyt_genelNet" to genelNet
                     )
                     mReferance.child(denemeId).setValue(yeniTytDeneme)
+
+                    Toast.makeText(
+                        this@turkce_deneme_net_hesapla,
+                        "Deneme Başarıyla Kaydedildi",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 
@@ -304,7 +314,6 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
                 Log.e("Firebase", "Veri okuma hatası: ${error.message}")
                 Log.e("Firebase", "Details: ${error.details}")
                 Log.e("Firebase", "Code: ${error.code}")
-
             }
         })
 

@@ -22,6 +22,7 @@
     <string name="ayt_net_hesapla">AYT Net Hesapla Buton</string>
     <string name="dakika">Dakika</string>
     <string name="performansim">Performansım</string>
+    <string name="gecmis_denemeler_menu_bar_tittle">Geçmiş Denemelerim</string>
     <string name="performansim_scroll">performansım menu scroll</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layour">Tab Layout</string>

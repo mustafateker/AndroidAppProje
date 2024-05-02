@@ -11,8 +11,10 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.CheckBox
 import android.widget.Switch
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import androidx.core.content.res.ResourcesCompat
 
 
 class bunu_unutma : AppCompatActivity() {
@@ -26,6 +28,10 @@ class bunu_unutma : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bunu_unutma)
+
+        val libreFranklinSemibold = R.font.libre_franklin_semibold
+        findViewById<TextView>(R.id.textView15).typeface =
+            ResourcesCompat.getFont(this, libreFranklinSemibold)
 
         switch = findViewById(R.id.switch1)
         checkBox = findViewById(R.id.checkbox)

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DenemeAdapter(private val denemeList: List<Deneme>) :
+class DenemeAdapter(private val denemeList: MutableList<Deneme>) :
     RecyclerView.Adapter<DenemeAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -37,8 +37,8 @@ class DenemeAdapter(private val denemeList: List<Deneme>) :
         holder.genelNetBilgisiTextView.textSize = 16f
 
         holder.siraIndeksiTextView.text = "${deneme.siraIndex}"
-        holder.adiTextView.text = "${deneme.name}"
-        holder.tarihTextView.text = "${deneme.date}"
+        holder.adiTextView.text = deneme.name
+        holder.tarihTextView.text = deneme.date
         holder.genelNetBilgisiTextView.text = "${deneme.GenelNetBilgisi}"
     }
 
@@ -46,4 +46,3 @@ class DenemeAdapter(private val denemeList: List<Deneme>) :
         return denemeList.size
     }
 }
-
