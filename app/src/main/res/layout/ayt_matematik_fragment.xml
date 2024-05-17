@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AytMatematikFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ayt_matematik_scroll_view"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/ayt_turkce_scroll"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ayt_matematik_linear_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ayt_matematikLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/ayt_matematikIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/ayt_matematikTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/ayt_matematikNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ayt_matematikLayout" />
+
+                <TextView
+                    android:id="@+id/ayt_matematikCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/ayt_matematikCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/ayt_matematikLayout" />
+
+
+                <TextView
+                    android:id="@+id/ayt_matematikWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/ayt_matematikWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/ayt_matematikCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/ayt_matematikLayout" />
+
+                <TextView
+                    android:id="@+id/ayt_matematikEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikNet"
+                    app:layout_constraintEnd_toStartOf="@+id/ayt_matematikEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/ayt_matematikLayout" />
+
+                <TextView
+                    android:id="@+id/ayt_matematikTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/matematik_2_tittle"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/ayt_matematikCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/ayt_matematikWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ayt_matematikEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/ayt_matematikEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/ayt_matematikNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/geometriLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/geometriIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/geometriTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/geometriNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/geometriLayout" />
+
+                <TextView
+                    android:id="@+id/geometriCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/geometriCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/geometriLayout" />
+
+
+                <TextView
+                    android:id="@+id/geometriWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/geometriWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/geometriCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/geometriLayout" />
+
+                <TextView
+                    android:id="@+id/geometriEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriNet"
+                    app:layout_constraintEnd_toStartOf="@+id/geometriEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/geometriLayout" />
+
+                <TextView
+                    android:id="@+id/geometriTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/geometri_2_tittle"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/geometriCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/geometriWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/geometriEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/geometriEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/geometriNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

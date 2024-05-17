@@ -23,6 +23,7 @@
     <string name="dakika">Dakika</string>
     <string name="performansim">Performansım</string>
     <string name="gecmis_denemeler_menu_bar_tittle">Geçmiş Denemelerim</string>
+    <string name="ayt_deneme_hesapla_menu_bar_tittle">Ayt Deneme Hesapla</string>
     <string name="performansim_scroll">performansım menu scroll</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layour">Tab Layout</string>
@@ -49,4 +50,17 @@
     <string name="gecmis_denemelerime_kaydet">Geçmiş Denemelerime Kaydet</string>
     <string name="net_sayisi">Net sayısı</string>
     <string name="deneme_adi">Deneme Adı</string>
+    <string name="ayt_turkce_scroll">Ayt Türkçe Scroll</string>
+    <string name="ayt_turkdiliveedebiyati">Türk Dili ve Edebiyatı</string>
+    <string name="cografya1">Coğrafya-1</string>
+    <string name="tarih_1">Tarih-1</string>
+    <string name="secmeligrubutittle">Din Kültürü / Felsefe</string>
+    <string name="felsefe_grubu_tittle">Felsefe Grubu</string>
+    <string name="cografya2tittle">Coğrafya-2</string>
+    <string name="tarih_2_tittle">Tarih-2</string>
+    <string name="matematik_2_tittle">Matematik-2</string>
+    <string name="geometri_2_tittle">Geometri-2</string>
+    <string name="fizik_2_tittle">Fizik-2</string>
+    <string name="biyoloji_2_tittle">Biyoloji-2</string>
+    <string name="kimya_2_tittle">Kimya-2</string>
 </resources>

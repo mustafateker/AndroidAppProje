@@ -16,6 +16,12 @@ class deneme_net_hesapla : AppCompatActivity() {
             val tytDenemeHesaplaPage = Intent(applicationContext, turkce_deneme_net_hesapla::class.java)
             startActivity(tytDenemeHesaplaPage)
         }
+
+        val AytDenemeHesapla : ImageButton = findViewById(R.id.imageButton2)
+        AytDenemeHesapla.setOnClickListener(){
+            val aytDenemeHesaplaPage = Intent(applicationContext, AytDenemeHesaplaActivity::class.java)
+            startActivity(aytDenemeHesaplaPage)
+        }
     }
 
 }

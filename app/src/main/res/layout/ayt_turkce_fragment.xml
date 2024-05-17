@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:contentDescription="@string/ayt_turkce_scroll"
+    android:layout_height="match_parent"
+    tools:context=".AytTurkceFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ayt_turk_dili_scroll_view"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/ayt_turkce_scroll"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ayt_turkce_linear_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cografya1Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/cografya1Icon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1Correct"
+                    app:layout_constraintEnd_toStartOf="@id/cografya1Tittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/cografya1Net"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/cografya1Layout" />
+
+                <TextView
+                    android:id="@+id/cografya1Correct"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1Wrong"
+                    app:layout_constraintEnd_toStartOf="@+id/cografya1CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/cografya1Layout" />
+
+
+                <TextView
+                    android:id="@+id/cografya1Wrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/cografya1WrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1Emptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/cografya1CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/cografya1Layout" />
+
+                <TextView
+                    android:id="@+id/cografya1Emptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1Net"
+                    app:layout_constraintEnd_toStartOf="@+id/cografya1Empty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/cografya1Layout" />
+
+                <TextView
+                    android:id="@+id/cografya1Tittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/cografya1"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1CorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/cografya1CorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1WrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/cografya1WrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/cografya1Empty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/cografya1Empty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/cografya1Net" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tarih1Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/tarih1Icon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1Correct"
+                    app:layout_constraintEnd_toStartOf="@id/tarih1Tittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/tarih1Net"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tarih1Layout" />
+
+                <TextView
+                    android:id="@+id/tarih1Correct"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1Wrong"
+                    app:layout_constraintEnd_toStartOf="@+id/tarih1CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/tarih1Layout" />
+
+
+                <TextView
+                    android:id="@+id/tarih1Wrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/tarih1WrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1Emptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/tarih1CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/tarih1Layout" />
+
+                <TextView
+                    android:id="@+id/tarih1Emptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1Net"
+                    app:layout_constraintEnd_toStartOf="@+id/tarih1Empty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/tarih1Layout" />
+
+                <TextView
+                    android:id="@+id/tarih1Tittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tarih_1"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1CorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/tarih1CorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1WrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/tarih1WrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tarih1Empty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tarih1Empty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/tarih1Net" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/aytturkdiliLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/aytturkdiliIcon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliCorrect"
+                    app:layout_constraintEnd_toStartOf="@id/aytturkdiliTittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/aytturkdiliNet"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/aytturkdiliLayout" />
+
+                <TextView
+                    android:id="@+id/aytturkdiliCorrect"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliWrong"
+                    app:layout_constraintEnd_toStartOf="@+id/aytturkdiliCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/aytturkdiliLayout" />
+
+
+                <TextView
+                    android:id="@+id/aytturkdiliWrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/aytturkdiliWrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliEmptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/aytturkdiliCorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/aytturkdiliLayout" />
+
+                <TextView
+                    android:id="@+id/aytturkdiliEmptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliNet"
+                    app:layout_constraintEnd_toStartOf="@+id/aytturkdiliEmpty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/aytturkdiliLayout" />
+
+                <TextView
+                    android:id="@+id/aytturkdiliTittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/ayt_turkdiliveedebiyati"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliCorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/aytturkdiliCorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliWrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/aytturkdiliWrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/aytturkdiliEmpty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/aytturkdiliEmpty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/aytturkdiliNet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

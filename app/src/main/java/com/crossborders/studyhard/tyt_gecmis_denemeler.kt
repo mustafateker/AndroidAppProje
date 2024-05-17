@@ -1,6 +1,6 @@
 package com.crossborders.studyhard
 
-import android.annotation.SuppressLint
+
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -48,19 +48,20 @@ class tyt_gecmis_denemeler : Fragment() {
         val currentUserId = FirebaseAuth.getInstance().uid
         databaseReference = FirebaseDatabase.getInstance().getReference("users/$currentUserId/user_denemeler/user_tytdenemeleri")
 
-        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+        databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                // Temizleme işlemi
+                // Temizleme işlemintListener
                 denemeList.clear()
 
                 // Her bir deneme ID'si için
                 for (denemeSnapshot in snapshot.children) {
-                    try {
+                    try{
                         // Deneme verilerini direkt olarak al
-                        val denemeNo = denemeSnapshot.child("user_tyt_deneme_no").getValue(Int::class.java)?.toInt() ?: 0
-                        val denemeAdi = denemeSnapshot.child("tyt_denemeAdi").getValue(String::class.java) ?: ""
-                        val denemeTarihiMillis = denemeSnapshot.child("tyt_deneme_tarihi").getValue(Long::class.java) ?: 0
-                        val netSayisi = denemeSnapshot.child("tyt_genelNet").getValue(String::class.java)?.toInt() ?: 0
+
+                        val denemeNo = denemeSnapshot.child("tytDenemeNo").getValue(Int::class.java)?.toInt() ?: 0
+                        val denemeAdi = denemeSnapshot.child("tytDenemeAdi").getValue(String::class.java) ?: ""
+                        val denemeTarihiMillis = denemeSnapshot.child("tytDenemeTarihi").getValue(Long::class.java) ?: 0
+                        val netSayisi = denemeSnapshot.child("tytGenelNet").getValue(String::class.java) ?: ""
 
                         // Unix zaman damgasını tarihe dönüştür
                         val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
@@ -82,7 +83,6 @@ class tyt_gecmis_denemeler : Fragment() {
                 Log.e("Firebase", "Veri okuma hatası: ${error.message}")
             }
         })
-
         return view
     }
 
@@ -90,3 +90,4 @@ class tyt_gecmis_denemeler : Fragment() {
 
 
 }
+

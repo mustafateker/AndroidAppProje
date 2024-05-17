@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.crossborders.studyhard.databinding.FragmentAytGecmisDenemelerBinding
@@ -57,10 +58,11 @@ class ayt_gecmis_denemeler : Fragment() {
                 for (ds in snapshot.children) {
                     try {
                         // Firebase'den veriyi al
-                        val denemeNo = ds.child("user_tyt_deneme_no").getValue(Double::class.java)?.toInt() ?: 0
-                        val denemeAdi = ds.child("tyt_denemeAdi").getValue(String::class.java) ?: ""
-                        val denemeTarihiMillis = ds.child("tyt_deneme_tarihi").getValue(Long::class.java) ?: 0
-                        val netSayisi = ds.child("tyt_genelNet").getValue(Double::class.java)?.toInt() ?: 0
+                        val denemeNo = ds.child("tytDenemeNo").getValue(Double::class.java)?.toInt() ?: 0
+                        val denemeAdi = ds.child("tytDenemeAdi").getValue(String::class.java) ?: ""
+                        val denemeTarihiMillis = ds.child("tytDenemeTarihi").getValue(Long::class.java) ?: 0
+                        val netSayisi = ds.child("tytGenelNet").getValue(String::class.java)?: ""
+
 
                         // Unix zaman damgasını tarihe dönüştür
                         val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())

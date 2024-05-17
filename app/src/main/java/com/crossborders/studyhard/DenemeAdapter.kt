@@ -24,7 +24,7 @@ class DenemeAdapter(private val denemeList: MutableList<Deneme>) :
         return ViewHolder(view)
     }
 
-    @SuppressLint("SetTextI18n")
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val deneme = denemeList[position]
         holder.siraIndeksiTextView.typeface = Typeface.create("libre_franklin_semibold", Typeface.BOLD)

@@ -290,15 +290,15 @@ class turkce_deneme_net_hesapla: AppCompatActivity() {
                         ).show()
                     }
                     val yeniTytDeneme = hashMapOf(
-                        "user_tyt_deneme_no" to denemeNo,
-                        "user_tyt_deneme_ID" to denemeId,
-                        "tyt_denemeAdi" to getDenemeAdi,
-                        "tyt_deneme_tarihi" to currentDate,
-                        "tyt_turkishNet" to turkishNet,
-                        "tyt_matematikNet" to matematikNet,
-                        "tyt_sosyalNet" to sostalNet,
-                        "tyt_fenNet" to fenNet,
-                        "tyt_genelNet" to genelNet
+                        "tytDenemeNo" to denemeNo,
+                        "tytDenemeId" to denemeId,
+                        "tytDenemeAdi" to getDenemeAdi,
+                        "tytDenemeTarihi" to currentDate,
+                        "tytTurkishNet" to turkishNet,
+                        "tytMatematikNet" to matematikNet,
+                        "tytSosyalNet" to sostalNet,
+                        "tytFenNet" to fenNet,
+                        "tytGenelNet" to genelNet
                     )
                     mReferance.child(denemeId).setValue(yeniTytDeneme)
 

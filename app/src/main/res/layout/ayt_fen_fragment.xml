@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AytFenFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ayt_fen_scroll_view"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/ayt_turkce_scroll"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ayt_fen_linear_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fizik2Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/fizik2Icon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2Correct"
+                    app:layout_constraintEnd_toStartOf="@id/fizik2Tittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/fizik2Net"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/fizik2Layout" />
+
+                <TextView
+                    android:id="@+id/fizik2Correct"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2Wrong"
+                    app:layout_constraintEnd_toStartOf="@+id/fizik2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/fizik2Layout" />
+
+
+                <TextView
+                    android:id="@+id/fizik2Wrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/fizik2WrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2Emptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/fizik2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/fizik2Layout" />
+
+                <TextView
+                    android:id="@+id/fizik2Emptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2Net"
+                    app:layout_constraintEnd_toStartOf="@+id/fizik2Empty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/fizik2Layout" />
+
+                <TextView
+                    android:id="@+id/fizik2Tittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/fizik_2_tittle"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2CorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fizik2CorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2WrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fizik2WrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/fizik2Empty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/fizik2Empty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/fizik2Net" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/kimya2Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/kimya2Icon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2Correct"
+                    app:layout_constraintEnd_toStartOf="@id/kimya2Tittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/kimya2Net"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/kimya2Layout" />
+
+                <TextView
+                    android:id="@+id/kimya2Correct"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2Wrong"
+                    app:layout_constraintEnd_toStartOf="@+id/kimya2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/kimya2Layout" />
+
+
+                <TextView
+                    android:id="@+id/kimya2Wrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/kimya2WrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2Emptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/kimya2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/kimya2Layout" />
+
+                <TextView
+                    android:id="@+id/kimya2Emptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2Net"
+                    app:layout_constraintEnd_toStartOf="@+id/kimya2Empty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/kimya2Layout" />
+
+                <TextView
+                    android:id="@+id/kimya2Tittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/kimya_2_tittle"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2CorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/kimya2CorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2WrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/kimya2WrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/kimya2Empty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/kimya2Empty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/kimya2Net" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/biyoloji2Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="451dp">
+
+                <ImageView
+                    android:id="@+id/biyoloji2Icon"
+                    android:layout_width="78dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/tyt_deneme_hesapla_page_bar"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2Correct"
+                    app:layout_constraintEnd_toStartOf="@id/biyoloji2Tittle"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/app_icon__main_top" />
+
+
+                <TextView
+                    android:id="@+id/biyoloji2Net"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/net_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/biyoloji2Layout" />
+
+                <TextView
+                    android:id="@+id/biyoloji2Correct"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dogru_cevap_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2Wrong"
+                    app:layout_constraintEnd_toStartOf="@+id/biyoloji2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/biyoloji2Layout" />
+
+
+                <TextView
+                    android:id="@+id/biyoloji2Wrong"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/biyoloji2WrongSpinner"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/yanl_cevap"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2Emptytext"
+                    app:layout_constraintEnd_toStartOf="@+id/biyoloji2CorrectSpinner"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="@id/biyoloji2Layout" />
+
+                <TextView
+                    android:id="@+id/biyoloji2Emptytext"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/bos_sayisi"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2Net"
+                    app:layout_constraintEnd_toStartOf="@+id/biyoloji2Empty"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="@id/biyoloji2Layout" />
+
+                <TextView
+                    android:id="@+id/biyoloji2Tittle"
+                    android:layout_width="318dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/biyoloji_2_tittle"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2CorrectSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/biyoloji2CorrectSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2WrongSpinner"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/biyoloji2WrongSpinner"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/biyoloji2Empty"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/biyoloji2Empty"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="108dp"
+                    android:gravity="center"
+                    android:hint="@string/bos_sayisi_textView"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.702"
+                    app:layout_constraintStart_toEndOf="@+id/biyoloji2Net" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
